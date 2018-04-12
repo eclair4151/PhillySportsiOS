@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		733FC45C207AE7F80017B4D3 /* RequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FC45B207AE7F80017B4D3 /* RequestUtil.swift */; };
+		733FC45F207EE29F0017B4D3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FC45E207EE29F0017B4D3 /* LoginResponse.swift */; };
+		73CAF91620795653003937C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF91520795653003937C3 /* AppDelegate.swift */; };
+		73CAF91820795653003937C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF91720795653003937C3 /* ViewController.swift */; };
+		73CAF91B20795653003937C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CAF91920795653003937C3 /* Main.storyboard */; };
+		73CAF91D20795653003937C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73CAF91C20795653003937C3 /* Assets.xcassets */; };
+		73CAF92020795653003937C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CAF91E20795653003937C3 /* LaunchScreen.storyboard */; };
+		73CAF92820795662003937C3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CAF92720795662003937C3 /* Login.storyboard */; };
+		73CAF92A2079658E003937C3 /* LoginWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF9292079658E003937C3 /* LoginWebViewController.swift */; };
+		73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF92C20796CD9003937C3 /* LoginViewController.swift */; };
+		73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF92F20796D86003937C3 /* UIExtensions.swift */; };
+		8E396C3FB5BADF2B525CE447 /* Pods_PhillySportsLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhillySportsLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		733FC45B207AE7F80017B4D3 /* RequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtil.swift; sourceTree = "<group>"; };
+		733FC45E207EE29F0017B4D3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		73CAF91220795653003937C3 /* PhillySportsLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhillySportsLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73CAF91520795653003937C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		73CAF91720795653003937C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73CAF91A20795653003937C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73CAF91C20795653003937C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73CAF91F20795653003937C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		73CAF92120795653003937C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73CAF92720795662003937C3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		73CAF9292079658E003937C3 /* LoginWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebViewController.swift; sourceTree = "<group>"; };
+		73CAF92C20796CD9003937C3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		73CAF92F20796D86003937C3 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		BB1700535CAB665930C89048 /* Pods-PhillySportsLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.release.xcconfig"; sourceTree = "<group>"; };
+		CE6F45E7802053E6B1F5D8D9 /* Pods-PhillySportsLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73CAF90F20795652003937C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E396C3FB5BADF2B525CE447 /* Pods_PhillySportsLeague.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0462528086E69D8128EA6C91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F45E7802053E6B1F5D8D9 /* Pods-PhillySportsLeague.debug.xcconfig */,
+				BB1700535CAB665930C89048 /* Pods-PhillySportsLeague.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		733FC45A207AE47C0017B4D3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				733FC45B207AE7F80017B4D3 /* RequestUtil.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		733FC45D207EE2920017B4D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				733FC45E207EE29F0017B4D3 /* LoginResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		73CAF90920795652003937C3 = {
+			isa = PBXGroup;
+			children = (
+				73CAF91420795653003937C3 /* PhillySportsLeague */,
+				73CAF91320795653003937C3 /* Products */,
+				0462528086E69D8128EA6C91 /* Pods */,
+				BF6E1725BCE3B83B564FB75F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		73CAF91320795653003937C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73CAF91220795653003937C3 /* PhillySportsLeague.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73CAF91420795653003937C3 /* PhillySportsLeague */ = {
+			isa = PBXGroup;
+			children = (
+				733FC45D207EE2920017B4D3 /* Models */,
+				733FC45A207AE47C0017B4D3 /* Networking */,
+				73CAF92E20796D6C003937C3 /* Helpers */,
+				73CAF92B20796596003937C3 /* ViewControllers */,
+				73CAF91520795653003937C3 /* AppDelegate.swift */,
+				73CAF91720795653003937C3 /* ViewController.swift */,
+				73CAF91920795653003937C3 /* Main.storyboard */,
+				73CAF91C20795653003937C3 /* Assets.xcassets */,
+				73CAF91E20795653003937C3 /* LaunchScreen.storyboard */,
+				73CAF92120795653003937C3 /* Info.plist */,
+				73CAF92720795662003937C3 /* Login.storyboard */,
+			);
+			path = PhillySportsLeague;
+			sourceTree = "<group>";
+		};
+		73CAF92B20796596003937C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				73CAF9292079658E003937C3 /* LoginWebViewController.swift */,
+				73CAF92C20796CD9003937C3 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		73CAF92E20796D6C003937C3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				73CAF92F20796D86003937C3 /* UIExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BF6E1725BCE3B83B564FB75F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73CAF91120795652003937C3 /* PhillySportsLeague */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73CAF92420795653003937C3 /* Build configuration list for PBXNativeTarget "PhillySportsLeague" */;
+			buildPhases = (
+				F86C3E76CD6EEEE76E73887F /* [CP] Check Pods Manifest.lock */,
+				73CAF90E20795652003937C3 /* Sources */,
+				73CAF90F20795652003937C3 /* Frameworks */,
+				73CAF91020795652003937C3 /* Resources */,
+				D1395AC0FBC4060180A2C42B /* [CP] Embed Pods Frameworks */,
+				33C19B26E2AB05CC1EAF496D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhillySportsLeague;
+			productName = PhillySportsLeague;
+			productReference = 73CAF91220795653003937C3 /* PhillySportsLeague.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73CAF90A20795652003937C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Tomer Shemesh";
+				TargetAttributes = {
+					73CAF91120795652003937C3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 73CAF90D20795652003937C3 /* Build configuration list for PBXProject "PhillySportsLeague" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73CAF90920795652003937C3;
+			productRefGroup = 73CAF91320795653003937C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73CAF91120795652003937C3 /* PhillySportsLeague */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73CAF91020795652003937C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73CAF92820795662003937C3 /* Login.storyboard in Resources */,
+				73CAF92020795653003937C3 /* LaunchScreen.storyboard in Resources */,
+				73CAF91D20795653003937C3 /* Assets.xcassets in Resources */,
+				73CAF91B20795653003937C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33C19B26E2AB05CC1EAF496D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1395AC0FBC4060180A2C42B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F86C3E76CD6EEEE76E73887F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73CAF90E20795652003937C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */,
+				733FC45C207AE7F80017B4D3 /* RequestUtil.swift in Sources */,
+				73CAF91820795653003937C3 /* ViewController.swift in Sources */,
+				73CAF92A2079658E003937C3 /* LoginWebViewController.swift in Sources */,
+				73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */,
+				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
+				733FC45F207EE29F0017B4D3 /* LoginResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		73CAF91920795653003937C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73CAF91A20795653003937C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		73CAF91E20795653003937C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73CAF91F20795653003937C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73CAF92220795653003937C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		73CAF92320795653003937C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73CAF92520795653003937C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6F45E7802053E6B1F5D8D9 /* Pods-PhillySportsLeague.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDYR7V7AH4;
+				INFOPLIST_FILE = PhillySportsLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ID-3457AB1C.com.shemeshapps.PhillySportsLeague";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73CAF92620795653003937C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB1700535CAB665930C89048 /* Pods-PhillySportsLeague.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDYR7V7AH4;
+				INFOPLIST_FILE = PhillySportsLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ID-3457AB1C.com.shemeshapps.PhillySportsLeague";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73CAF90D20795652003937C3 /* Build configuration list for PBXProject "PhillySportsLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73CAF92220795653003937C3 /* Debug */,
+				73CAF92320795653003937C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73CAF92420795653003937C3 /* Build configuration list for PBXNativeTarget "PhillySportsLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73CAF92520795653003937C3 /* Debug */,
+				73CAF92620795653003937C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73CAF90A20795652003937C3 /* Project object */;
+}

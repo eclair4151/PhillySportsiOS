@@ -1,0 +1,6 @@
+framework module Pods_PhillySportsLeague {
+  umbrella header "Pods-PhillySportsLeague-umbrella.h"
+
+  export *
+  module * { export * }
+}
