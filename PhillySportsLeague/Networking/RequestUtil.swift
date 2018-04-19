@@ -11,7 +11,7 @@ import Alamofire
 
 
 
-public func login(_ email: String, password: String, listener: @escaping ((LoginResponse) -> Void))
+public func login(_ email: String, password: String, listener: @escaping ((Dashboard?, Error?) -> Void))
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     
@@ -32,31 +32,30 @@ public func login(_ email: String, password: String, listener: @escaping ((Login
             queue: queue,
             responseSerializer: DataRequest.stringResponseSerializer(),
             completionHandler: { response in
-                
                 switch response.result {
                 case .success(let data):
-                    if response.result.value?.range(of: "Please fix the following errors:") != nil {
-                        let res = LoginResponse(success: false)
-                        
-                        listener(res)
+                    let res = parseDashboard(html: response.result.value!)
+                    DispatchQueue.main.async {
+                        listener(res,nil)
                     }
                     break
                     
                 case .failure(let error):
+                    DispatchQueue.main.async {
+                        listener(nil,error)
+                    }
                     break
-                    //alertError(self, error: error,response:response, request: "deleteEntry")
                 }
-                // You are now running on the concurrent `queue` you created earlier.
-                print("Parsing JSON on thread: \(Thread.current) is main thread: \(Thread.isMainThread)")
+
                 
-                // Validate your JSON response and convert into model objects if necessary
-                //print(response.result.value)
-                
-                // To update anything on the main thread, just jump back on like so.
-                DispatchQueue.main.async {
-                    print("Am I back on the main thread: \(Thread.isMainThread)")
-                }
         }
     )
 }
 
+
+public func clearCookies() -> Void{
+    let cookieStore = HTTPCookieStorage.shared
+    for cookie in cookieStore.cookies ?? [] {
+        cookieStore.deleteCookie(cookie)
+    }
+}

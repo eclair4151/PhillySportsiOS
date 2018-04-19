@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		733FC45C207AE7F80017B4D3 /* RequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FC45B207AE7F80017B4D3 /* RequestUtil.swift */; };
-		733FC45F207EE29F0017B4D3 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733FC45E207EE29F0017B4D3 /* LoginResponse.swift */; };
 		73CAF91620795653003937C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF91520795653003937C3 /* AppDelegate.swift */; };
 		73CAF91820795653003937C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF91720795653003937C3 /* ViewController.swift */; };
 		73CAF91B20795653003937C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73CAF91920795653003937C3 /* Main.storyboard */; };
@@ -19,12 +18,15 @@
 		73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF92C20796CD9003937C3 /* LoginViewController.swift */; };
 		73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF92F20796D86003937C3 /* UIExtensions.swift */; };
 		8E396C3FB5BADF2B525CE447 /* Pods_PhillySportsLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */; };
+		F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0020883B97003E5076 /* DashboardRow.swift */; };
+		F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED022088B81B003E5076 /* UIHelpers.swift */; };
+		F1B458622088338600EED099 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458612088338600EED099 /* Dashboard.swift */; };
+		F1B458642088342C00EED099 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458632088342C00EED099 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhillySportsLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		733FC45B207AE7F80017B4D3 /* RequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestUtil.swift; sourceTree = "<group>"; };
-		733FC45E207EE29F0017B4D3 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		73CAF91220795653003937C3 /* PhillySportsLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhillySportsLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73CAF91520795653003937C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73CAF91720795653003937C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +40,10 @@
 		73CAF92F20796D86003937C3 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		BB1700535CAB665930C89048 /* Pods-PhillySportsLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.release.xcconfig"; sourceTree = "<group>"; };
 		CE6F45E7802053E6B1F5D8D9 /* Pods-PhillySportsLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.debug.xcconfig"; sourceTree = "<group>"; };
+		F16BED0020883B97003E5076 /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
+		F16BED022088B81B003E5076 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		F1B458612088338600EED099 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		F1B458632088342C00EED099 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				733FC45B207AE7F80017B4D3 /* RequestUtil.swift */,
+				F1B458632088342C00EED099 /* Parser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -72,7 +79,8 @@
 		733FC45D207EE2920017B4D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				733FC45E207EE29F0017B4D3 /* LoginResponse.swift */,
+				F1B458612088338600EED099 /* Dashboard.swift */,
+				F16BED0020883B97003E5076 /* DashboardRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				73CAF92F20796D86003937C3 /* UIExtensions.swift */,
+				F16BED022088B81B003E5076 /* UIHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -231,9 +240,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -246,13 +260,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhillySportsLeague-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -264,11 +281,14 @@
 			files = (
 				73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */,
 				733FC45C207AE7F80017B4D3 /* RequestUtil.swift in Sources */,
+				F1B458622088338600EED099 /* Dashboard.swift in Sources */,
 				73CAF91820795653003937C3 /* ViewController.swift in Sources */,
 				73CAF92A2079658E003937C3 /* LoginWebViewController.swift in Sources */,
+				F1B458642088342C00EED099 /* Parser.swift in Sources */,
 				73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */,
+				F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */,
 				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
-				733FC45F207EE29F0017B4D3 /* LoginResponse.swift in Sources */,
+				F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,10 +13,15 @@ class LoginViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var emailBox: UITextField!
     @IBOutlet weak var passwordBox: UITextField!
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    @IBOutlet weak var labelLoginMessage: UILabel!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        titleLabel.adjustsFontSizeToFitWidth = true
     }
 
     override func viewDidLayoutSubviews() {
@@ -37,21 +42,38 @@ class LoginViewController: UIViewController, UITextViewDelegate {
         else
         {
             textField.resignFirstResponder()
-            //loginPressed(textField)
+            loginPressed(textField)
         }
         return true
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        let cookieStore = HTTPCookieStorage.shared
-        for cookie in cookieStore.cookies ?? [] {
-            cookieStore.deleteCookie(cookie)
-        }
-        
-        login(emailBox.text!, password: passwordBox.text!) { (response) in
-            
+        if ((self.emailBox.text?.isEmpty)! || (self.passwordBox.text?.isEmpty)!) {
+            alertBox("Error", message: "One or more fields are empty", controller: self)
+        } else {
+            self.loadingView.startAnimating()
+            self.loginButton.setTitle("", for: .normal)
+            clearCookies()
+            login(emailBox.text!, password: passwordBox.text!) { (response, error) in
+                if (error == nil) {
+                    if (!response!.success) {
+                        self.labelLoginMessage.text = response?.error
+                        self.loginButton.setTitle("Log In", for: .normal)
+                        self.loadingView.stopAnimating()
+                    } else {
+                        
+                    }
+                } else {
+                    self.loginButton.setTitle("Log In", for: .normal)
+                    self.loadingView.stopAnimating()
+                    //alert error
+                    alertBox("Error", message: "An error occured: \(error.debugDescription)", controller: self)
+                }
+            }
         }
     }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -61,6 +83,10 @@ class LoginViewController: UIViewController, UITextViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func forgotPasswordClicked(_ sender: Any) {
+        UIApplication.shared.open(URL(string : "https://phillyleagues.leagueapps.com/login")!, options: [:], completionHandler: { (status) in
+        })
+    }
     
     @IBAction func loginFBPressed(_ sender: Any) {
     }
