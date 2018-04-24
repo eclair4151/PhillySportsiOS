@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.7.1)
+  - Kingfisher (4.7.0)
   - SwiftSoup (1.7.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
-  - SwiftSoup
+  - Kingfisher (~> 4.0)
+  - SwiftSoup (~> 1.7)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   SwiftSoup: 277f7ef548826e0ca7603a06b30d4a5df3ee0587
 
-PODFILE CHECKSUM: 041f8cb4ec83d484d413cec1302e1b207586b8f1
+PODFILE CHECKSUM: 5caf95f0e643e7325812be15bd97a379fd951cbe
 
 COCOAPODS: 1.4.0

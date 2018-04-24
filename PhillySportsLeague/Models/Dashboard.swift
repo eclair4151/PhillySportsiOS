@@ -8,19 +8,18 @@
 
 import Foundation
 
-public class Dashboard {
+public class Dashboard: JsonResponse {
     
     //MARK: Properties
-    init() {
+    override init() {
         self.imageUrl = ""
         self.name = ""
-        self.error = ""
         self.dashboardRows = []
         self.success = false
+        super.init()
     }
     
     var imageUrl: String
-    var error: String
     var success: Bool
     var name: String
     var dashboardRows :[DashboardRow]

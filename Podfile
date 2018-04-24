@@ -6,7 +6,7 @@ target 'PhillySportsLeague' do
   use_frameworks!
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftSoup', '~> 1.7'
-
+  pod 'Kingfisher', '~> 4.0'
   # Pods for PhillySportsLeague
 
 end

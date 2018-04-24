@@ -22,7 +22,6 @@ public func parseDashboard(html: String) -> Dashboard {
                 dash.error = try! errors.get(0).text()
             }
         } else {
-            dash.success = true
             let rows: [Element] = try! doc.select("table#ga-members-table tr").array()
             //drop first because its the header
             for row in rows.dropFirst() {
@@ -38,6 +37,8 @@ public func parseDashboard(html: String) -> Dashboard {
             
             dash.name = (try! doc.select("img#profile-photo").first()?.attr("src"))!
             dash.imageUrl = (try! doc.select("em.context").first()?.text().replacingOccurrences(of: "Welcome back, ", with: ""))!
+            dash.success = true
+
         }
         return dash
     } catch Exception.Error(let type, let message) {
@@ -45,7 +46,43 @@ public func parseDashboard(html: String) -> Dashboard {
     } catch {
         print("error")
     }
-    
-    
     return dash
+}
+
+
+
+
+public func parseLeague(html: String) -> League {
+    let league = League()
+    
+    do {
+        let doc: Document = try SwiftSoup.parse(html)
+        league.soldOut = try! doc.select("a#programRegButton").size() == 0
+        league.season = (try! doc.select("dd.program-list-season").first()?.text())!
+        league.starts = (try! doc.select("dd.program-list-starts").first()?.text())!
+        league.registrationDates = (try! doc.select("dd.program-list-registration-dates").first()?.text())!
+        league.locationName = (try! doc.select("dd.program-list-location a").first()?.text())!
+        league.locationUrl = (try! doc.select("dd.program-list-location a").first()?.attr("href"))!
+        
+        //may not be there
+        let prices = try! doc.select("span.individual-price")
+        if prices.size() == 2 {
+            league.individualPrice = try! prices.get(0).text()
+            league.freeAgentPrice = try! prices.get(1).text()
+        }
+        
+        league.dayOfWeek = (try! doc.select("span.base-gamedays strong").first()?.text())!
+        league.timeOfWeek = (try! doc.select("div.base-schedule em").first()?.text())!
+        
+        //got to do some weird stuff
+        league.scheduleUrl = (try! doc.select("li[data-id=Schedule] a").first()?.attr("href"))!
+        league.standingsUrl = (try! doc.select("li[data-id=Standings] a").first()?.attr("href"))!
+
+        return league
+    } catch Exception.Error(let type, let message) {
+        print(message)
+    } catch {
+        print("error")
+    }
+    return league
 }

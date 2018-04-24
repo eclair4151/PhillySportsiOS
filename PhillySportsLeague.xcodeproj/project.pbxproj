@@ -20,6 +20,12 @@
 		8E396C3FB5BADF2B525CE447 /* Pods_PhillySportsLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */; };
 		F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0020883B97003E5076 /* DashboardRow.swift */; };
 		F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED022088B81B003E5076 /* UIHelpers.swift */; };
+		F16BED05208DFA9F003E5076 /* JsonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED04208DFA9F003E5076 /* JsonResponse.swift */; };
+		F16BED07208E02A2003E5076 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED06208E02A2003E5076 /* DashboardTableViewCell.swift */; };
+		F16BED09208E0301003E5076 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED08208E0301003E5076 /* DashboardViewController.swift */; };
+		F16BED0C208E1962003E5076 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0B208E1962003E5076 /* CardTableViewCell.swift */; };
+		F16BED0E208FAE60003E5076 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0D208FAE60003E5076 /* League.swift */; };
+		F16BED10208FB5C8003E5076 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0F208FB5C8003E5076 /* Constants.swift */; };
 		F1B458622088338600EED099 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458612088338600EED099 /* Dashboard.swift */; };
 		F1B458642088342C00EED099 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458632088342C00EED099 /* Parser.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +48,12 @@
 		CE6F45E7802053E6B1F5D8D9 /* Pods-PhillySportsLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.debug.xcconfig"; sourceTree = "<group>"; };
 		F16BED0020883B97003E5076 /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
 		F16BED022088B81B003E5076 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
+		F16BED04208DFA9F003E5076 /* JsonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonResponse.swift; sourceTree = "<group>"; };
+		F16BED06208E02A2003E5076 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
+		F16BED08208E0301003E5076 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		F16BED0B208E1962003E5076 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		F16BED0D208FAE60003E5076 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		F16BED0F208FB5C8003E5076 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F1B458612088338600EED099 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		F1B458632088342C00EED099 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +93,8 @@
 			children = (
 				F1B458612088338600EED099 /* Dashboard.swift */,
 				F16BED0020883B97003E5076 /* DashboardRow.swift */,
+				F16BED04208DFA9F003E5076 /* JsonResponse.swift */,
+				F16BED0D208FAE60003E5076 /* League.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,6 +120,7 @@
 		73CAF91420795653003937C3 /* PhillySportsLeague */ = {
 			isa = PBXGroup;
 			children = (
+				F16BED0A208E1934003E5076 /* Views */,
 				733FC45D207EE2920017B4D3 /* Models */,
 				733FC45A207AE47C0017B4D3 /* Networking */,
 				73CAF92E20796D6C003937C3 /* Helpers */,
@@ -126,6 +141,7 @@
 			children = (
 				73CAF9292079658E003937C3 /* LoginWebViewController.swift */,
 				73CAF92C20796CD9003937C3 /* LoginViewController.swift */,
+				F16BED08208E0301003E5076 /* DashboardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -135,6 +151,7 @@
 			children = (
 				73CAF92F20796D86003937C3 /* UIExtensions.swift */,
 				F16BED022088B81B003E5076 /* UIHelpers.swift */,
+				F16BED0F208FB5C8003E5076 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -145,6 +162,15 @@
 				57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F16BED0A208E1934003E5076 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F16BED06208E02A2003E5076 /* DashboardTableViewCell.swift */,
+				F16BED0B208E1962003E5076 /* CardTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,11 +268,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,10 +313,16 @@
 				73CAF91820795653003937C3 /* ViewController.swift in Sources */,
 				73CAF92A2079658E003937C3 /* LoginWebViewController.swift in Sources */,
 				F1B458642088342C00EED099 /* Parser.swift in Sources */,
+				F16BED07208E02A2003E5076 /* DashboardTableViewCell.swift in Sources */,
+				F16BED10208FB5C8003E5076 /* Constants.swift in Sources */,
+				F16BED09208E0301003E5076 /* DashboardViewController.swift in Sources */,
+				F16BED05208DFA9F003E5076 /* JsonResponse.swift in Sources */,
 				73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */,
 				F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */,
 				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
 				F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */,
+				F16BED0E208FAE60003E5076 /* League.swift in Sources */,
+				F16BED0C208E1962003E5076 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
