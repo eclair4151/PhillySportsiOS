@@ -26,6 +26,7 @@
 		F16BED0C208E1962003E5076 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0B208E1962003E5076 /* CardTableViewCell.swift */; };
 		F16BED0E208FAE60003E5076 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0D208FAE60003E5076 /* League.swift */; };
 		F16BED10208FB5C8003E5076 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0F208FB5C8003E5076 /* Constants.swift */; };
+		F16BED1220909B97003E5076 /* LeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED1120909B97003E5076 /* LeagueViewController.swift */; };
 		F1B458622088338600EED099 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458612088338600EED099 /* Dashboard.swift */; };
 		F1B458642088342C00EED099 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458632088342C00EED099 /* Parser.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		F16BED0B208E1962003E5076 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		F16BED0D208FAE60003E5076 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		F16BED0F208FB5C8003E5076 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F16BED1120909B97003E5076 /* LeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewController.swift; sourceTree = "<group>"; };
 		F1B458612088338600EED099 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		F1B458632088342C00EED099 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 				73CAF9292079658E003937C3 /* LoginWebViewController.swift */,
 				73CAF92C20796CD9003937C3 /* LoginViewController.swift */,
 				F16BED08208E0301003E5076 /* DashboardViewController.swift */,
+				F16BED1120909B97003E5076 /* LeagueViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */,
 				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
 				F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */,
+				F16BED1220909B97003E5076 /* LeagueViewController.swift in Sources */,
 				F16BED0E208FAE60003E5076 /* League.swift in Sources */,
 				F16BED0C208E1962003E5076 /* CardTableViewCell.swift in Sources */,
 			);
