@@ -16,14 +16,14 @@ public class League: JsonResponse {
         season = ""
         starts = ""
         registrationDates = ""
-        locationUrl = ""
-        locationName = ""
-        individualPrice = ""
+        location = GameLocation()
+        teamPrice = ""
         freeAgentPrice = ""
         dayOfWeek = ""
         timeOfWeek = ""
         scheduleUrl = ""
         standingsUrl = ""
+        leagueID = ""
         super.init()
     }
     
@@ -31,12 +31,12 @@ public class League: JsonResponse {
     var season: String
     var starts: String
     var registrationDates: String
-    var locationName: String
-    var locationUrl: String
-    var individualPrice: String
+    var location: GameLocation
+    var teamPrice: String
     var freeAgentPrice: String
     var dayOfWeek: String
     var timeOfWeek: String
     var scheduleUrl: String
     var standingsUrl: String
+    var leagueID: String
 }

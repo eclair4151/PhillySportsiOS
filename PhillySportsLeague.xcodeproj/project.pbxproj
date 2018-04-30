@@ -27,6 +27,10 @@
 		F16BED0E208FAE60003E5076 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0D208FAE60003E5076 /* League.swift */; };
 		F16BED10208FB5C8003E5076 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0F208FB5C8003E5076 /* Constants.swift */; };
 		F16BED1220909B97003E5076 /* LeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED1120909B97003E5076 /* LeagueViewController.swift */; };
+		F16BED1C209676D5003E5076 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED1B209676D5003E5076 /* Game.swift */; };
+		F16BED1E209676DF003E5076 /* LeagueSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED1D209676DF003E5076 /* LeagueSchedule.swift */; };
+		F16BED2020968B26003E5076 /* GameLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED1F20968B26003E5076 /* GameLocation.swift */; };
+		F16BED22209736CB003E5076 /* LeagueScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */; };
 		F1B458622088338600EED099 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458612088338600EED099 /* Dashboard.swift */; };
 		F1B458642088342C00EED099 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458632088342C00EED099 /* Parser.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +60,10 @@
 		F16BED0D208FAE60003E5076 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		F16BED0F208FB5C8003E5076 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F16BED1120909B97003E5076 /* LeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewController.swift; sourceTree = "<group>"; };
+		F16BED1B209676D5003E5076 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F16BED1D209676DF003E5076 /* LeagueSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueSchedule.swift; sourceTree = "<group>"; };
+		F16BED1F20968B26003E5076 /* GameLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLocation.swift; sourceTree = "<group>"; };
+		F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueScheduleViewController.swift; sourceTree = "<group>"; };
 		F1B458612088338600EED099 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		F1B458632088342C00EED099 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +105,9 @@
 				F16BED0020883B97003E5076 /* DashboardRow.swift */,
 				F16BED04208DFA9F003E5076 /* JsonResponse.swift */,
 				F16BED0D208FAE60003E5076 /* League.swift */,
+				F16BED1B209676D5003E5076 /* Game.swift */,
+				F16BED1D209676DF003E5076 /* LeagueSchedule.swift */,
+				F16BED1F20968B26003E5076 /* GameLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 				73CAF92C20796CD9003937C3 /* LoginViewController.swift */,
 				F16BED08208E0301003E5076 /* DashboardViewController.swift */,
 				F16BED1120909B97003E5076 /* LeagueViewController.swift */,
+				F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */,
+				F16BED1C209676D5003E5076 /* Game.swift in Sources */,
 				733FC45C207AE7F80017B4D3 /* RequestUtil.swift in Sources */,
 				F1B458622088338600EED099 /* Dashboard.swift in Sources */,
+				F16BED22209736CB003E5076 /* LeagueScheduleViewController.swift in Sources */,
 				73CAF91820795653003937C3 /* ViewController.swift in Sources */,
 				73CAF92A2079658E003937C3 /* LoginWebViewController.swift in Sources */,
 				F1B458642088342C00EED099 /* Parser.swift in Sources */,
@@ -321,10 +335,12 @@
 				F16BED09208E0301003E5076 /* DashboardViewController.swift in Sources */,
 				F16BED05208DFA9F003E5076 /* JsonResponse.swift in Sources */,
 				73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */,
+				F16BED2020968B26003E5076 /* GameLocation.swift in Sources */,
 				F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */,
 				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
 				F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */,
 				F16BED1220909B97003E5076 /* LeagueViewController.swift in Sources */,
+				F16BED1E209676DF003E5076 /* LeagueSchedule.swift in Sources */,
 				F16BED0E208FAE60003E5076 /* League.swift in Sources */,
 				F16BED0C208E1962003E5076 /* CardTableViewCell.swift in Sources */,
 			);

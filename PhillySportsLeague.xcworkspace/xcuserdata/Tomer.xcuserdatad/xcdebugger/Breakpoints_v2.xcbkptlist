@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.091634"
+            timestampString = "546781210.077402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.091728"
+            timestampString = "546781210.077512"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.091794"
+            timestampString = "546781210.077598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.091853"
+            timestampString = "546781210.077659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -74,7 +74,7 @@
                   moduleName = "PhillySportsLeague"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tomer/Documents/xcode/PhillySportsiOS/PhillySportsLeague/Networking/RequestUtil.swift"
-                  timestampString = "546522014.043481"
+                  timestampString = "546781210.218294"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -89,7 +89,7 @@
                   moduleName = "PhillySportsLeague"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tomer/Documents/xcode/PhillySportsiOS/PhillySportsLeague/Networking/RequestUtil.swift"
-                  timestampString = "546522014.046629"
+                  timestampString = "546781210.2233779"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Views/DashboardTableViewCell.swift"
-            timestampString = "546529073.091987"
+            timestampString = "546781210.07778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -199,24 +199,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.0920399"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "getLeague(_:listener:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/Parser.swift"
-            timestampString = "546529073.092087"
+            timestampString = "546781210.07786"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "59"
@@ -232,7 +216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/ViewControllers/DashboardViewController.swift"
-            timestampString = "546529073.092135"
+            timestampString = "546781210.078349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
@@ -248,7 +232,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/ViewControllers/DashboardViewController.swift"
-            timestampString = "546529073.092586"
+            timestampString = "546781210.078433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -264,7 +248,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/Parser.swift"
-            timestampString = "546529073.092895"
+            timestampString = "546781210.078527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -276,11 +260,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/Parser.swift"
-            timestampString = "546529073.092955"
+            timestampString = "546781210.078745"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -296,7 +280,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.093008"
+            timestampString = "546781210.079031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -308,11 +292,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.093062"
+            timestampString = "546781210.079154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -328,7 +312,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.0931129"
+            timestampString = "546781210.079245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -372,11 +356,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.093165"
+            timestampString = "546781210.079308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -385,14 +369,14 @@
             landmarkType = "9">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.String&gt;) -&gt; () in PhillySportsLeague.getDashboard((Swift.Optional&lt;PhillySportsLeague.Dashboard&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "PhillySportsLeague"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tomer/Documents/xcode/PhillySportsiOS/PhillySportsLeague/Networking/RequestUtil.swift"
-                  timestampString = "546522023.430918"
+                  timestampString = "546781072.83972"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -400,14 +384,14 @@
                   offsetFromSymbolStart = "1260">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #2 () -&gt; () in closure #1 (Alamofire.DataResponse&lt;Swift.String&gt;) -&gt; () in PhillySportsLeague.getDashboard((Swift.Optional&lt;PhillySportsLeague.Dashboard&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "PhillySportsLeague"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tomer/Documents/xcode/PhillySportsiOS/PhillySportsLeague/Networking/RequestUtil.swift"
-                  timestampString = "546522023.4349051"
+                  timestampString = "546781072.8415231"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "75"
@@ -424,12 +408,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PhillySportsLeague/Networking/RequestUtil.swift"
-            timestampString = "546529073.093214"
+            timestampString = "546781210.079371"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
             landmarkName = "getDashboard(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhillySportsLeague/Networking/Parser.swift"
+            timestampString = "546781210.079437"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "parseLeagueSchedule(html:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhillySportsLeague/Networking/Parser.swift"
+            timestampString = "546781262.018132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "parseLeagueSchedule(html:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

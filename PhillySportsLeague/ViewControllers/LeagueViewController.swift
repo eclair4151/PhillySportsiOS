@@ -68,7 +68,7 @@ class LeagueViewController: UIViewController {
         self.seasonLabel.attributedText = BoldPartOfString("Season:", label: self.league.season)
         self.startsLabel.attributedText = BoldPartOfString("Starts:", label: self.league.starts)
         self.registrationLabel.attributedText = BoldPartOfString("Registration Dates:", label: self.league.registrationDates)
-        self.locationLabel.attributedText = BoldPartOfString("Location:", label: self.league.locationName)
+        self.locationLabel.attributedText = BoldPartOfString("Location:", label: self.league.location.name)
         self.weekDayLabel.attributedText = BoldPartOfString("Week Day:", label: self.league.dayOfWeek)
         self.timeLabel.attributedText = BoldPartOfString("Time:", label: self.league.timeOfWeek)
         
@@ -93,14 +93,18 @@ class LeagueViewController: UIViewController {
     @IBAction func detailsClicked(_ sender: Any) {
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LeagueSchedule" {
+            let destination = segue.destination as? LeagueScheduleViewController
+            destination?.league = self.league
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
 
 }

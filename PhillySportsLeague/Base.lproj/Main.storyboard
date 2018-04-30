@@ -454,6 +454,7 @@
                                         <state key="normal" title="Schedule"/>
                                         <connections>
                                             <action selector="scheduleClicked:" destination="deE-ck-uXp" eventType="touchUpInside" id="Adq-gJ-E8n"/>
+                                            <segue destination="K1g-RX-9Q0" kind="show" identifier="LeagueSchedule" id="ewN-bk-QEb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eq9-7d-pch">
@@ -545,6 +546,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yP6-k2-7tK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2168.8000000000002" y="-284.25787106446779"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="cfk-2g-HAl">
+            <objects>
+                <viewController title="Schedule" id="K1g-RX-9Q0" customClass="LeagueScheduleViewController" customModule="PhillySportsLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Coe-As-qT7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9Da-bq-2LU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHe-Ty-rO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2990" y="-284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yXF-kS-IRq">
