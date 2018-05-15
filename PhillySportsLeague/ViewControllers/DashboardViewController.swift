@@ -30,11 +30,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     func updateScreen() {
         self.tableView.reloadData()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         getDashboard { (response, error) in
@@ -91,6 +87,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             let dashboardRow = self.dashboard.dashboardRows[row]
             let destination = segue.destination as? LeagueViewController
             destination?.dashboardRow = dashboardRow
+        } else if segue.identifier == "ShowTeam" {
+            let dashboardRow = self.dashboard.dashboardRows[row]
+            let destination = segue.destination as? TeamViewController
+            destination?.teamUrl = dashboardRow.teamUrl
+            destination?.teamName = dashboardRow.teamName
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

@@ -1,24 +1,28 @@
 //
-//  LeagueScheduleViewController.swift
+//  TeamViewController.swift
 //  PhillySportsLeague
 //
-//  Created by Tomer Shemesh on 4/30/18.
+//  Created by Tomer Shemesh on 5/4/18.
 //  Copyright © 2018 Tomer Shemesh. All rights reserved.
 //
 
 import UIKit
 
-class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TeamViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var league: League!
-    var schedule: LeagueSchedule!
-    var leagueSchedule: LeagueSchedule!
-    
+    @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messagesButton: UIButton!
+    @IBOutlet weak var rosterButton: UIButton!
+    @IBOutlet weak var tableviewBottomSpace: NSLayoutConstraint!
     
+    var teamSchedule: LeagueSchedule!
+    var teamUrl: String!
+    var teamName: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let refreshControl = UIRefreshControl()
         self.tableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action:
@@ -27,44 +31,63 @@ class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.separatorStyle = .none
         self.tableView.refreshControl?.beginRefreshingManually()
         self.tableView.register(UINib(nibName: "GameRow", bundle: nil), forCellReuseIdentifier: "GameRow")
-
         
-        getLeagueSchedule(league.leagueID) { (response, error) in
+        self.teamNameLabel.text = self.teamName
+        
+        let ids = self.teamUrl.split(separator: "/")
+        
+        getTeamSchedule(String(ids[3]), leagueID: String(ids[1])) { (response, error) in
             if (error == nil) {
                 self.tableView.refreshControl?.endRefreshing()
-                self.leagueSchedule = response
-               self.tableView.reloadData()
+                self.teamSchedule = response
+                self.tableView.reloadData()
             } else {
                 alertBox("Error", message: "An error occured: \(error.debugDescription)", controller: self)
             }
+            
         }
         
-        // Do any additional setup after loading the view.
     }
+
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameRow", for: indexPath) as! LeagueGameTableViewCell
-        let game = leagueSchedule.games[indexPath.row]
+        let game = teamSchedule.games[indexPath.row]
         cell.dateLabel.text = game.date + " @ " + game.time
-        cell.team1Button.setTitle(game.team1Name, for: .normal)
+        cell.team1Button.setTitle(self.teamName, for: .normal)
         cell.team2Button.setTitle(game.team2Name, for: .normal)
         cell.team1Score.text = game.team1Score
         cell.team2Score.text = game.team2Score
+        
         cell.locationLabel.text = "Location: " + game.location.name
+        
+        if game.team1Score != "" && game.team2Score != "" {
+            if game.didTeam1Win() {
+                cell.sideColor.backgroundColor = hexStringToUIColor("#306ABC")
+            } else {
+                cell.sideColor.backgroundColor = hexStringToUIColor("#EDEDED")
+            }
+        }
         return cell
     }
     
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.leagueSchedule != nil {
-            return self.leagueSchedule.games.count
-        } else {
+        if self.teamSchedule == nil {
             return 0
+        } else {
+            return self.teamSchedule.games.count
         }
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         self.tableView.refreshControl?.endRefreshing()
+    }
+    
+    @IBAction func rosterClicked(_ sender: Any) {
+    }
+    
+    @IBAction func messagesClicked(_ sender: Any) {
     }
     
     /*

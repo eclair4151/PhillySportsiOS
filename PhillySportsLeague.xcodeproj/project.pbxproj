@@ -33,6 +33,9 @@
 		F16BED22209736CB003E5076 /* LeagueScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */; };
 		F1B458622088338600EED099 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458612088338600EED099 /* Dashboard.swift */; };
 		F1B458642088342C00EED099 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B458632088342C00EED099 /* Parser.swift */; };
+		F1B8F0D1209B29140082F88D /* GameRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1B8F0D0209B29140082F88D /* GameRow.xib */; };
+		F1B8F0D5209B2AEB0082F88D /* LeagueGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8F0D4209B2AEB0082F88D /* LeagueGameTableViewCell.swift */; };
+		F1B8F0D7209C79520082F88D /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B8F0D6209C79520082F88D /* TeamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueScheduleViewController.swift; sourceTree = "<group>"; };
 		F1B458612088338600EED099 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		F1B458632088342C00EED099 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F1B8F0D0209B29140082F88D /* GameRow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameRow.xib; sourceTree = "<group>"; };
+		F1B8F0D4209B2AEB0082F88D /* LeagueGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueGameTableViewCell.swift; sourceTree = "<group>"; };
+		F1B8F0D6209C79520082F88D /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		73CAF91420795653003937C3 /* PhillySportsLeague */ = {
 			isa = PBXGroup;
 			children = (
+				F1B8F0CF209B28F50082F88D /* Nibs */,
 				F16BED0A208E1934003E5076 /* Views */,
 				733FC45D207EE2920017B4D3 /* Models */,
 				733FC45A207AE47C0017B4D3 /* Networking */,
@@ -157,6 +164,7 @@
 				F16BED08208E0301003E5076 /* DashboardViewController.swift */,
 				F16BED1120909B97003E5076 /* LeagueViewController.swift */,
 				F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */,
+				F1B8F0D6209C79520082F88D /* TeamViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,8 +192,17 @@
 			children = (
 				F16BED06208E02A2003E5076 /* DashboardTableViewCell.swift */,
 				F16BED0B208E1962003E5076 /* CardTableViewCell.swift */,
+				F1B8F0D4209B2AEB0082F88D /* LeagueGameTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F1B8F0CF209B28F50082F88D /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				F1B8F0D0209B29140082F88D /* GameRow.xib */,
+			);
+			path = Nibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +270,7 @@
 				73CAF92820795662003937C3 /* Login.storyboard in Resources */,
 				73CAF92020795653003937C3 /* LaunchScreen.storyboard in Resources */,
 				73CAF91D20795653003937C3 /* Assets.xcassets in Resources */,
+				F1B8F0D1209B29140082F88D /* GameRow.xib in Resources */,
 				73CAF91B20795653003937C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */,
+				F1B8F0D7209C79520082F88D /* TeamViewController.swift in Sources */,
 				F16BED1C209676D5003E5076 /* Game.swift in Sources */,
+				F1B8F0D5209B2AEB0082F88D /* LeagueGameTableViewCell.swift in Sources */,
 				733FC45C207AE7F80017B4D3 /* RequestUtil.swift in Sources */,
 				F1B458622088338600EED099 /* Dashboard.swift in Sources */,
 				F16BED22209736CB003E5076 /* LeagueScheduleViewController.swift in Sources */,
@@ -481,8 +501,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FDYR7V7AH4;
+				DEVELOPMENT_TEAM = X9E89UU97K;
 				INFOPLIST_FILE = PhillySportsLeague/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ID-3457AB1C.com.shemeshapps.PhillySportsLeague";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,8 +518,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FDYR7V7AH4;
+				DEVELOPMENT_TEAM = X9E89UU97K;
 				INFOPLIST_FILE = PhillySportsLeague/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ID-3457AB1C.com.shemeshapps.PhillySportsLeague";
 				PRODUCT_NAME = "$(TARGET_NAME)";

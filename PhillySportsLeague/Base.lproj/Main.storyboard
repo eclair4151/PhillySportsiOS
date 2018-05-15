@@ -21,7 +21,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zpx-C8-ACc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" id="RBc-yI-esW"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="baseline_schedule_black_36pt" id="RBc-yI-esW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6io-Wy-WUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,7 +37,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CRD-H8-4p0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Browse" id="cMJ-ys-nwu"/>
+                    <tabBarItem key="tabBarItem" title="Browse" image="baseline_search_black_36pt" id="cMJ-ys-nwu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zX5-KF-yt4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +53,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ld0-pB-nii"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="aPG-so-ycb"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="baseline_settings_black_36pt" id="aPG-so-ycb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6l-wn-eDn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jT8-7c-Qhs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="aYe-gk-uX0"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="baseline_dashboard_black_36pt" id="aYe-gk-uX0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gld-UH-NBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,46 +158,7 @@
                                                                     <fragment content="League Name">
                                                                         <attributes>
                                                                             <font key="NSFont" size="16" name="HelveticaNeue"/>
-                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                                <tabStops>
-                                                                                    <textTab alignment="left" location="28">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="56">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="84">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="112">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="140">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="168">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="196">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="224">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="252">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="280">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="308">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                    <textTab alignment="left" location="336">
-                                                                                        <options/>
-                                                                                    </textTab>
-                                                                                </tabStops>
-                                                                            </paragraphStyle>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                         </attributes>
                                                                     </fragment>
                                                                 </attributedString>
@@ -225,6 +186,9 @@
                                                                     </fragment>
                                                                 </attributedString>
                                                             </state>
+                                                            <connections>
+                                                                <segue destination="3ZT-Za-iYm" kind="show" identifier="ShowTeam" id="fda-Bb-bNE"/>
+                                                            </connections>
                                                         </button>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xI8-up-Gmh">
                                                             <rect key="frame" x="13" y="13" width="70" height="70"/>
@@ -545,7 +509,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yP6-k2-7tK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168.8000000000002" y="-284.25787106446779"/>
+            <point key="canvasLocation" x="2159" y="-547"/>
+        </scene>
+        <!--Team-->
+        <scene sceneID="C0g-m2-XLN">
+            <objects>
+                <viewController title="Team" id="3ZT-Za-iYm" customClass="TeamViewController" customModule="PhillySportsLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rkc-XF-0zv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx7-Jx-VIL">
+                                <rect key="frame" x="16" y="81" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eNq-sa-ujw">
+                                <rect key="frame" x="0.0" y="110" width="375" height="466"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3ZT-Za-iYm" id="tEW-Hw-rI9"/>
+                                    <outlet property="delegate" destination="3ZT-Za-iYm" id="5vt-Yk-wR1"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzr-1C-FBf">
+                                <rect key="frame" x="0.0" y="576" width="174.5" height="42"/>
+                                <state key="normal" title="Team Roster"/>
+                                <connections>
+                                    <action selector="rosterClicked:" destination="3ZT-Za-iYm" eventType="touchUpInside" id="gHZ-BS-FZl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iN-yJ-4s8">
+                                <rect key="frame" x="200.5" y="576" width="174.5" height="42"/>
+                                <state key="normal" title="Messages"/>
+                                <connections>
+                                    <action selector="messagesClicked:" destination="3ZT-Za-iYm" eventType="touchUpInside" id="Akp-LP-AVK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xx7-Jx-VIL" firstAttribute="leading" secondItem="Yme-aS-A0f" secondAttribute="leading" constant="16" id="7BN-ld-fXM"/>
+                            <constraint firstItem="Vzr-1C-FBf" firstAttribute="bottom" secondItem="Yme-aS-A0f" secondAttribute="bottom" id="JbD-xL-GtT"/>
+                            <constraint firstItem="0iN-yJ-4s8" firstAttribute="top" secondItem="eNq-sa-ujw" secondAttribute="bottom" id="Jee-vD-KLv"/>
+                            <constraint firstItem="0iN-yJ-4s8" firstAttribute="width" secondItem="Vzr-1C-FBf" secondAttribute="width" id="Uax-zM-Noa"/>
+                            <constraint firstItem="eNq-sa-ujw" firstAttribute="top" secondItem="Xx7-Jx-VIL" secondAttribute="bottom" constant="8" id="V0b-u1-zLh"/>
+                            <constraint firstItem="eNq-sa-ujw" firstAttribute="trailing" secondItem="Yme-aS-A0f" secondAttribute="trailing" id="VUa-XZ-J9x"/>
+                            <constraint firstItem="Xx7-Jx-VIL" firstAttribute="top" secondItem="Yme-aS-A0f" secondAttribute="top" constant="17" id="Vjm-dv-GwY"/>
+                            <constraint firstItem="Yme-aS-A0f" firstAttribute="bottom" secondItem="eNq-sa-ujw" secondAttribute="bottom" constant="42" id="aZ5-ag-B8Z"/>
+                            <constraint firstItem="Yme-aS-A0f" firstAttribute="trailing" secondItem="Xx7-Jx-VIL" secondAttribute="trailing" constant="16" id="bQD-66-C9a"/>
+                            <constraint firstItem="0iN-yJ-4s8" firstAttribute="trailing" secondItem="Yme-aS-A0f" secondAttribute="trailing" id="kBi-2S-axO"/>
+                            <constraint firstItem="Vzr-1C-FBf" firstAttribute="top" secondItem="eNq-sa-ujw" secondAttribute="bottom" id="qfb-qq-FnN"/>
+                            <constraint firstItem="0iN-yJ-4s8" firstAttribute="leading" secondItem="Vzr-1C-FBf" secondAttribute="trailing" constant="26" id="qzV-pT-oje"/>
+                            <constraint firstItem="eNq-sa-ujw" firstAttribute="leading" secondItem="Yme-aS-A0f" secondAttribute="leading" id="u0O-eJ-SS6"/>
+                            <constraint firstItem="0iN-yJ-4s8" firstAttribute="bottom" secondItem="Yme-aS-A0f" secondAttribute="bottom" id="uO3-cq-OIO"/>
+                            <constraint firstItem="Vzr-1C-FBf" firstAttribute="leading" secondItem="Yme-aS-A0f" secondAttribute="leading" id="x69-mi-tSU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yme-aS-A0f"/>
+                    </view>
+                    <connections>
+                        <outlet property="messagesButton" destination="0iN-yJ-4s8" id="Jfi-yt-OJH"/>
+                        <outlet property="rosterButton" destination="Vzr-1C-FBf" id="maU-Pq-2Pu"/>
+                        <outlet property="tableView" destination="eNq-sa-ujw" id="TTK-EL-dhY"/>
+                        <outlet property="tableviewBottomSpace" destination="aZ5-ag-B8Z" id="FG6-eM-eB1"/>
+                        <outlet property="teamNameLabel" destination="Xx7-Jx-VIL" id="0es-d0-Eht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meX-Sz-v9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="171"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="cfk-2g-HAl">
@@ -554,18 +587,37 @@
                     <view key="view" contentMode="scaleToFill" id="Coe-As-qT7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2SR-Qy-OYc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="K1g-RX-9Q0" id="UCj-P6-Dni"/>
+                                    <outlet property="delegate" destination="K1g-RX-9Q0" id="ibX-H7-aeS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2SR-Qy-OYc" firstAttribute="bottom" secondItem="9Da-bq-2LU" secondAttribute="bottom" id="A2U-BV-4Fo"/>
+                            <constraint firstItem="2SR-Qy-OYc" firstAttribute="top" secondItem="9Da-bq-2LU" secondAttribute="top" id="Mdy-Sr-Jw9"/>
+                            <constraint firstItem="2SR-Qy-OYc" firstAttribute="trailing" secondItem="9Da-bq-2LU" secondAttribute="trailing" id="OPi-MA-ifo"/>
+                            <constraint firstItem="2SR-Qy-OYc" firstAttribute="leading" secondItem="9Da-bq-2LU" secondAttribute="leading" id="d18-3D-NnJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Da-bq-2LU"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="2SR-Qy-OYc" id="QFm-bt-bGM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHe-Ty-rO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2990" y="-284"/>
+            <point key="canvasLocation" x="2983" y="-547"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yXF-kS-IRq">
             <objects>
-                <tabBarController id="SeP-0l-sTt" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="home" id="SeP-0l-sTt" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f7b-nt-DyS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -583,6 +635,12 @@
             <point key="canvasLocation" x="-1204" y="898"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baseline_dashboard_black_36pt" width="36" height="36"/>
+        <image name="baseline_schedule_black_36pt" width="36" height="36"/>
+        <image name="baseline_search_black_36pt" width="36" height="36"/>
+        <image name="baseline_settings_black_36pt" width="36" height="36"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="qUr-3K-c7g"/>
     </inferredMetricsTieBreakers>

@@ -15,10 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        var storyboard: UIStoryboard! = nil
-//        storyboard = UIStoryboard(name: "Login", bundle: nil)
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "home")
-//        self.window?.rootViewController = initialViewController
+        if  !UserDefaults.standard.bool(forKey: "LoggedIn") {
+            var storyboard: UIStoryboard! = nil
+            storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "home")
+            self.window?.rootViewController = initialViewController
+        }
+
         return true
     }
 

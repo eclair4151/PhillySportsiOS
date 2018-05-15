@@ -17,7 +17,7 @@ public class DashboardRow {
         self.teamName = teamName
         self.teamUrl = teamUrl
         self.startDate = startDate
-        self.logoUrl = "https://svite-league-apps-img.s3.amazonaws.com/program-" + String(teamUrl.split(separator: "/")[3]) + "-s3.jpg"
+        self.logoUrl = "https://svite-league-apps-img.s3.amazonaws.com/program-" + String(teamUrl.split(separator: "/")[1]) + "-s3.jpg"
     }
     
     var logoUrl: String

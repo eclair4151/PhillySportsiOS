@@ -61,7 +61,11 @@ class LoginViewController: UIViewController, UITextViewDelegate {
                         self.loginButton.setTitle("Log In", for: .normal)
                         self.loadingView.stopAnimating()
                     } else {
-                        
+                        UserDefaults.standard.set(true, forKey: "LoggedIn")
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "home") as! UITabBarController
+                        vc.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+                        self.present(vc, animated: true, completion: nil)
                     }
                 } else {
                     self.loginButton.setTitle("Log In", for: .normal)

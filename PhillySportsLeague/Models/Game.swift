@@ -17,19 +17,32 @@ public class Game {
         team2URL = ""
         team1Name = ""
         team2Name = ""
-        team1Score = 0
-        team2Score = 0
+        team1Score = ""
+        team2Score = ""
         location = GameLocation()
     }
     var date: String
     var time: String
     var team1Name: String
     var team1URL: String
-    var team1Score: Int
+    var team1Score: String
     var team2Name: String
     var team2URL: String
-    var team2Score: Int
+    var team2Score: String
     var location: GameLocation
 
+    func didTeam1Win() -> Bool {
+        if team1Score == "W" {
+            return true
+        } else if team2Score == "W" {
+            return false
+        }
+        
+        if Int(team1Score) != nil && Int(team2Score) != nil {
+            return Int(team1Score)! > Int(team2Score)!
+        }
+        
+        return false
+    }
 }
 
