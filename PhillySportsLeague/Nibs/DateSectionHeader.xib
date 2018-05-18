@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DateHeaderTableViewCell" customModule="PhillySportsLeague" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, April 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV4-rM-jPD">
+                    <rect key="frame" x="20" y="10" width="107.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="7tp-3L-KgD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outline_arrow_right_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-Qd-3rq">
+                    <rect key="frame" x="338" y="10" width="21" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="I1s-g5-BYY"/>
+                        <constraint firstAttribute="width" constant="21" id="fR9-si-dnx"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.91863795642777557" green="1" blue="0.99275113545002114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YV4-rM-jPD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="7Wl-e6-xP3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5qL-Qd-3rq" secondAttribute="trailing" constant="16" id="P1i-qo-SVc"/>
+                <constraint firstItem="5qL-Qd-3rq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RHg-bL-THS"/>
+                <constraint firstItem="YV4-rM-jPD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iR2-yx-ybY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="dateTitle" destination="YV4-rM-jPD" id="QIa-Zd-4Kc"/>
+                <outlet property="expandedArrow" destination="5qL-Qd-3rq" id="LX2-H9-Jzg"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="38.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="outline_arrow_right_black_36pt" width="36" height="36"/>
+    </resources>
+</document>

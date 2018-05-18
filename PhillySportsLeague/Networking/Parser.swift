@@ -122,7 +122,7 @@ public func parseLeagueSchedule(html :String) -> LeagueSchedule {
                 game.team2Score = score
                
             }
-            schedule.games.append(game)
+            schedule.addGame(game: game)
         }
         return schedule
     } catch Exception.Error(let type, let message) {
@@ -164,8 +164,9 @@ public func parseTeamSchedule(html :String) -> LeagueSchedule {
                 game.team2URL = (try! row.select("h3.event-team a").first()?.attr("href"))!
             }
             
-            schedule.games.append(game)
+            schedule.addGame(game: game)
         }
+        
         return schedule
     } catch Exception.Error(let type, let message) {
         print(message)

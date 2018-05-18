@@ -11,8 +11,9 @@ import UIKit
 class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var league: League!
-    var schedule: LeagueSchedule!
     var leagueSchedule: LeagueSchedule!
+
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,7 +28,7 @@ class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.separatorStyle = .none
         self.tableView.refreshControl?.beginRefreshingManually()
         self.tableView.register(UINib(nibName: "GameRow", bundle: nil), forCellReuseIdentifier: "GameRow")
-
+        self.tableView.register(UINib(nibName: "DateSectionHeader", bundle: nil), forCellReuseIdentifier: "DateSectionHeader")
         
         getLeagueSchedule(league.leagueID) { (response, error) in
             if (error == nil) {
@@ -39,12 +40,22 @@ class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITab
             }
         }
         
+        self.tableView.estimatedRowHeight = 132
+        self.tableView.estimatedSectionHeaderHeight = 41
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+
+        
         // Do any additional setup after loading the view.
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GameRow", for: indexPath) as! LeagueGameTableViewCell
-        let game = leagueSchedule.games[indexPath.row]
+        let date = leagueSchedule.sectionDates[indexPath.section]
+        let game = leagueSchedule.dateGameMap[date]![indexPath.row]
         cell.dateLabel.text = game.date + " @ " + game.time
         cell.team1Button.setTitle(game.team1Name, for: .normal)
         cell.team2Button.setTitle(game.team2Name, for: .normal)
@@ -57,10 +68,29 @@ class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.leagueSchedule != nil {
-            return self.leagueSchedule.games.count
+            let date = self.leagueSchedule.sectionDates[section]
+            return self.leagueSchedule.dateGameMap[date]!.count
         } else {
             return 0
         }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if self.leagueSchedule != nil {
+            return self.leagueSchedule.sectionDates.count
+        } else {
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DateSectionHeader") as! DateHeaderTableViewCell
+        let date = leagueSchedule.sectionDates[section]
+        cell.dateTitle.text = date.title
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 41
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {

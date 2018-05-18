@@ -53,11 +53,11 @@ public func login(_ email: String, password: String, listener: @escaping ((Dashb
 }
 
 
-public func getDashboard(_ listener: @escaping ((Dashboard?, Error?) -> Void))
+public func getDashboard(_ past:Bool, listener: @escaping ((Dashboard?, Error?) -> Void))
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     
-    Alamofire.request("https://phillyleagues.leagueapps.com/dashboard", method: .get, encoding: URLEncoding.default)
+    Alamofire.request("https://phillyleagues.leagueapps.com/dashboard" + (past ? "?state=past" : ""), method: .get, encoding: URLEncoding.default)
         .response(
             queue: queue,
             responseSerializer: DataRequest.stringResponseSerializer(),

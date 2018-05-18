@@ -33,7 +33,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
 
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        getDashboard { (response, error) in
+        getDashboard(false) { (response, error) in
             refreshControl.endRefreshing()
             
             if (error == nil) {
@@ -92,6 +92,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             let destination = segue.destination as? TeamViewController
             destination?.teamUrl = dashboardRow.teamUrl
             destination?.teamName = dashboardRow.teamName
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Back"
+            navigationItem.backBarButtonItem = backItem
+        
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

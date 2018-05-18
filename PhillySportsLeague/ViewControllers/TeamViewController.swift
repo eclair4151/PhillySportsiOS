@@ -10,13 +10,12 @@ import UIKit
 
 class TeamViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messagesButton: UIButton!
     @IBOutlet weak var rosterButton: UIButton!
     @IBOutlet weak var tableviewBottomSpace: NSLayoutConstraint!
-    
     var teamSchedule: LeagueSchedule!
+    
     var teamUrl: String!
     var teamName: String!
 
@@ -32,7 +31,7 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.refreshControl?.beginRefreshingManually()
         self.tableView.register(UINib(nibName: "GameRow", bundle: nil), forCellReuseIdentifier: "GameRow")
         
-        self.teamNameLabel.text = self.teamName
+        self.title = self.teamName
         
         let ids = self.teamUrl.split(separator: "/")
         
@@ -47,6 +46,8 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
+        self.tableView.estimatedRowHeight = 132
+        
     }
 
 
@@ -56,6 +57,9 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.dateLabel.text = game.date + " @ " + game.time
         cell.team1Button.setTitle(self.teamName, for: .normal)
         cell.team2Button.setTitle(game.team2Name, for: .normal)
+        cell.team2Button.tag = indexPath.row
+        cell.team2Button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+
         cell.team1Score.text = game.team1Score
         cell.team2Score.text = game.team2Score
         
@@ -71,6 +75,15 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    @objc func buttonClicked(_ sender : UIButton) {
+        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
+        let team = self.teamSchedule.games[sender.tag]
+        nextView.teamUrl = team.team2URL
+        nextView.teamName = team.team2Name
+        self.navigationController?.pushViewController(nextView, animated: true)
+
+
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.teamSchedule == nil {
@@ -90,14 +103,10 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func messagesClicked(_ sender: Any) {
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
-    */
 
 }
