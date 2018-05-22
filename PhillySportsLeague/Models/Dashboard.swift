@@ -16,9 +16,11 @@ public class Dashboard: JsonResponse {
         self.name = ""
         self.dashboardRows = []
         self.success = false
+        self.isPast = false
         super.init()
     }
     
+    var isPast:Bool
     var imageUrl: String
     var success: Bool
     var name: String

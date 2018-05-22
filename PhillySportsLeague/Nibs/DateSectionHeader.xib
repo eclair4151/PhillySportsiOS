@@ -16,35 +16,49 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, April 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV4-rM-jPD">
-                    <rect key="frame" x="20" y="10" width="107.5" height="21"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKv-Zq-due">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="7tp-3L-KgD"/>
+                        <constraint firstAttribute="height" constant="41" id="Rtd-9a-o6I"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu, April 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M10-nm-Cns">
+                    <rect key="frame" x="10" y="10" width="107.5" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ODe-YB-al4"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="acZ-Pu-r7R"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outline_arrow_right_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-Qd-3rq">
-                    <rect key="frame" x="338" y="10" width="21" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outline_arrow_right_black_36pt" translatesAutoresizingMaskIntoConstraints="NO" id="5TS-VG-7Tm">
+                    <rect key="frame" x="336" y="10" width="21" height="21"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="I1s-g5-BYY"/>
-                        <constraint firstAttribute="width" constant="21" id="fR9-si-dnx"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="F8d-kg-OXn"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="21" id="WbI-21-WfV"/>
+                        <constraint firstAttribute="width" constant="21" id="X5j-cz-6wb"/>
+                        <constraint firstAttribute="height" constant="21" id="ah9-64-maX"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" red="0.91863795642777557" green="1" blue="0.99275113545002114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="YV4-rM-jPD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="7Wl-e6-xP3"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5qL-Qd-3rq" secondAttribute="trailing" constant="16" id="P1i-qo-SVc"/>
-                <constraint firstItem="5qL-Qd-3rq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="RHg-bL-THS"/>
-                <constraint firstItem="YV4-rM-jPD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iR2-yx-ybY"/>
+                <constraint firstItem="TKv-Zq-due" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0Bm-OB-dcg"/>
+                <constraint firstItem="M10-nm-Cns" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="E6i-TO-9tB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5TS-VG-7Tm" secondAttribute="trailing" constant="18" id="HV2-d5-V93"/>
+                <constraint firstItem="TKv-Zq-due" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="M0Y-ob-2dX"/>
+                <constraint firstItem="M10-nm-Cns" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UTj-9J-tZQ"/>
+                <constraint firstItem="TKv-Zq-due" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Z5E-Gv-ugq"/>
+                <constraint firstItem="TKv-Zq-due" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Zih-0z-ffX"/>
+                <constraint firstItem="5TS-VG-7Tm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="naU-Zd-NmY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="dateTitle" destination="YV4-rM-jPD" id="QIa-Zd-4Kc"/>
-                <outlet property="expandedArrow" destination="5qL-Qd-3rq" id="LX2-H9-Jzg"/>
+                <outlet property="dateTitle" destination="M10-nm-Cns" id="CrW-M6-HJb"/>
+                <outlet property="expandedArrow" destination="5TS-VG-7Tm" id="6c5-4A-Yye"/>
             </connections>
             <point key="canvasLocation" x="34.5" y="38.5"/>
         </view>

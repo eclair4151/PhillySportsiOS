@@ -24,28 +24,28 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-it-V3U">
                                     <rect key="frame" x="0.0" y="0.0" width="5" height="121.5"/>
-                                    <color key="backgroundColor" red="0.055388660940000001" green="0.70719316710000002" blue="0.57010660179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.054901960784313725" green="0.70588235294117641" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="5" id="Ziq-dc-Akt"/>
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu Mar 15th @ 8:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBA-ar-1bc">
-                                    <rect key="frame" x="13" y="3" width="334" height="21"/>
+                                    <rect key="frame" x="13" y="3" width="170.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="PMP-ZH-Ie7"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnO-e5-eWH">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnO-e5-eWH" customClass="DataButton" customModule="PhillySportsLeague" customModuleProvider="target">
                                     <rect key="frame" x="13" y="27" width="303" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="PC3-LV-G3f"/>
                                     </constraints>
                                     <state key="normal" title="6W. No Scrubs (pink)"/>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luh-vR-uyg">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luh-vR-uyg" customClass="DataButton" customModule="PhillySportsLeague" customModuleProvider="target">
                                     <rect key="frame" x="13" y="59" width="303" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="Hb3-jo-dgu"/>
@@ -79,13 +79,24 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pl7-Np-cTB">
+                                    <rect key="frame" x="202" y="4" width="0.0" height="18"/>
+                                    <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="nBm-O0-beb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="N8C-Xv-40d" firstAttribute="top" secondItem="luh-vR-uyg" secondAttribute="bottom" constant="10" id="8aX-7p-zgZ"/>
-                                <constraint firstAttribute="trailing" secondItem="NBA-ar-1bc" secondAttribute="trailing" constant="8" id="EgX-Dq-mQY"/>
                                 <constraint firstAttribute="trailing" secondItem="QGY-ez-DwD" secondAttribute="trailing" constant="8" id="Fhi-Kg-0kW"/>
                                 <constraint firstItem="QGY-ez-DwD" firstAttribute="leading" secondItem="luh-vR-uyg" secondAttribute="trailing" constant="8" id="GFV-mq-uUo"/>
+                                <constraint firstItem="Pl7-Np-cTB" firstAttribute="top" secondItem="9pO-q3-TZh" secondAttribute="top" constant="4" id="Gw1-B9-K9I"/>
+                                <constraint firstItem="Pl7-Np-cTB" firstAttribute="leading" secondItem="NBA-ar-1bc" secondAttribute="trailing" constant="18.5" id="Jy1-xI-AeP"/>
                                 <constraint firstItem="lnO-e5-eWH" firstAttribute="top" secondItem="NBA-ar-1bc" secondAttribute="bottom" constant="3" id="LSC-fY-Vze"/>
                                 <constraint firstAttribute="trailing" secondItem="thc-8e-tM3" secondAttribute="trailing" constant="8" id="LcE-GF-8PP"/>
                                 <constraint firstItem="QGY-ez-DwD" firstAttribute="top" secondItem="thc-8e-tM3" secondAttribute="bottom" constant="11" id="Pps-r9-bvh"/>
@@ -94,7 +105,6 @@
                                 <constraint firstItem="luh-vR-uyg" firstAttribute="leading" secondItem="hdq-it-V3U" secondAttribute="trailing" constant="8" id="Tq2-18-PMx"/>
                                 <constraint firstAttribute="height" constant="122" id="Vlk-55-qhG"/>
                                 <constraint firstItem="thc-8e-tM3" firstAttribute="leading" secondItem="lnO-e5-eWH" secondAttribute="trailing" constant="8" id="YLa-8K-bPS"/>
-                                <constraint firstItem="NBA-ar-1bc" firstAttribute="leading" secondItem="hdq-it-V3U" secondAttribute="trailing" constant="8" id="bZp-kI-CyN"/>
                                 <constraint firstItem="QGY-ez-DwD" firstAttribute="leading" secondItem="luh-vR-uyg" secondAttribute="trailing" constant="8" id="bac-fs-2Fg"/>
                                 <constraint firstItem="lnO-e5-eWH" firstAttribute="leading" secondItem="hdq-it-V3U" secondAttribute="trailing" constant="8" id="bc6-Ws-TMc"/>
                                 <constraint firstItem="hdq-it-V3U" firstAttribute="top" secondItem="9pO-q3-TZh" secondAttribute="top" id="dMa-i8-9Ax"/>
@@ -131,6 +141,7 @@
                 <outlet property="dateLabel" destination="NBA-ar-1bc" id="uzy-3J-njx"/>
                 <outlet property="locationLabel" destination="N8C-Xv-40d" id="fRx-nh-uN4"/>
                 <outlet property="sideColor" destination="hdq-it-V3U" id="1j5-HG-AvJ"/>
+                <outlet property="tagLabel" destination="Pl7-Np-cTB" id="CkL-Dh-puJ"/>
                 <outlet property="team1Button" destination="lnO-e5-eWH" id="hoX-Pt-a6d"/>
                 <outlet property="team1Score" destination="thc-8e-tM3" id="ghQ-XU-Zc7"/>
                 <outlet property="team2Button" destination="luh-vR-uyg" id="Gzp-Li-ILn"/>

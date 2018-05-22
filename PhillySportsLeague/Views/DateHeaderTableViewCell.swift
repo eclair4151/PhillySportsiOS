@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DateHeaderTableViewCell: UITableViewCell {
+class DateHeaderTableViewCell: UITableViewHeaderFooterView {
     
     @IBOutlet weak var dateTitle: UILabel!
     @IBOutlet weak var expandedArrow: UIImageView!
@@ -19,10 +19,5 @@ class DateHeaderTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }

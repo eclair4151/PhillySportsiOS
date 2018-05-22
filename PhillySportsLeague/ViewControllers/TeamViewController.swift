@@ -65,12 +65,20 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.locationLabel.text = "Location: " + game.location.name
         
-        if game.team1Score != "" && game.team2Score != "" {
+        if game.tag.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+            cell.tagLabel.text = "  " + game.tag + "  "
+        } else {
+            cell.tagLabel.text = ""
+        }
+        
+        if game.team1Score.trimmingCharacters(in: .whitespacesAndNewlines) != "" && game.team2Score.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
             if game.didTeam1Win() {
                 cell.sideColor.backgroundColor = hexStringToUIColor("#306ABC")
             } else {
                 cell.sideColor.backgroundColor = hexStringToUIColor("#EDEDED")
             }
+        } else {
+            cell.sideColor.backgroundColor = hexStringToUIColor("#0EB491")
         }
         return cell
     }
@@ -81,8 +89,6 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
         nextView.teamUrl = team.team2URL
         nextView.teamName = team.team2Name
         self.navigationController?.pushViewController(nextView, animated: true)
-
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

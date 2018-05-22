@@ -34,7 +34,7 @@ public func login(_ email: String, password: String, listener: @escaping ((Dashb
             completionHandler: { response in
                 switch response.result {
                 case .success(let data):
-                    let res = parseDashboard(html: response.result.value!)
+                    let res = parseDashboard(html: response.result.value!, isPast: false)
                     DispatchQueue.main.async {
                         listener(res,nil)
                     }
@@ -53,18 +53,18 @@ public func login(_ email: String, password: String, listener: @escaping ((Dashb
 }
 
 
-public func getDashboard(_ past:Bool, listener: @escaping ((Dashboard?, Error?) -> Void))
+public func getDashboard(_ isPast:Bool, listener: @escaping ((Dashboard?, Error?) -> Void))
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     
-    Alamofire.request("https://phillyleagues.leagueapps.com/dashboard" + (past ? "?state=past" : ""), method: .get, encoding: URLEncoding.default)
+    Alamofire.request("https://phillyleagues.leagueapps.com/dashboard" + (isPast ? "?state=past" : ""), method: .get, encoding: URLEncoding.default)
         .response(
             queue: queue,
             responseSerializer: DataRequest.stringResponseSerializer(),
             completionHandler: { response in
                 switch response.result {
                 case .success(let data):
-                    let res = parseDashboard(html: response.result.value!)
+                    let res = parseDashboard(html: response.result.value!, isPast: isPast)
                     DispatchQueue.main.async {
                         listener(res,nil)
                     }
@@ -144,7 +144,6 @@ public func getTeamSchedule(_ teamID: String, leagueID: String, listener: @escap
 public func getLeague(_ url: String, listener: @escaping ((League?, Error?) -> Void))
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
-    
     Alamofire.request(url, method: .get, encoding: URLEncoding.default)
         .response(
             queue: queue,
@@ -153,6 +152,36 @@ public func getLeague(_ url: String, listener: @escaping ((League?, Error?) -> V
                 switch response.result {
                 case .success(let data):
                     let res = parseLeague(html: response.result.value!)
+                    DispatchQueue.main.async {
+                        listener(res,nil)
+                    }
+                    break
+                    
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        listener(nil,error)
+                    }
+                    break
+                }
+                
+                
+        }
+    )
+}
+
+
+public func getSchedule(_ listener: @escaping ((GameSchedule?, Error?) -> Void))
+{
+    let url = "https://phillyleagues.leagueapps.com/calendar/json?origin=site&scope=user&baseEventId=&itemType=games_events&eventType=&gameType=&gameState=&locationId=&startsAfterDate=&startsBeforeDate=&baseEventIdsString=&locationIdsString=&sublocationIdsString=&teamId=&userScope=me_kids"
+    let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
+    Alamofire.request(url, method: .get, encoding: URLEncoding.default)
+        .response(
+            queue: queue,
+            responseSerializer: DataRequest.jsonResponseSerializer(),
+            completionHandler: { response in
+                switch response.result {
+                case .success(let data):
+                    let res = parseScheduleJson(json: data as! [[String: Any]])
                     DispatchQueue.main.async {
                         listener(res,nil)
                     }

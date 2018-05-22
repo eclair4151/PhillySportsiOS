@@ -19,6 +19,7 @@ public class Game {
         team2Name = ""
         team1Score = ""
         team2Score = ""
+        tag = ""
         location = GameLocation()
     }
     var date: String
@@ -30,7 +31,7 @@ public class Game {
     var team2URL: String
     var team2Score: String
     var location: GameLocation
-
+    var tag: String
     func didTeam1Win() -> Bool {
         if team1Score == "W" {
             return true

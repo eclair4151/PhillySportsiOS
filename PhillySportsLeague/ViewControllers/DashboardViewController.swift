@@ -13,6 +13,14 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     var dashboard: Dashboard!
+    var pastDashboard: Dashboard!
+    
+    @IBOutlet weak var currentIndicator: UIView!
+    @IBOutlet weak var currentButton: UIButton!
+    @IBOutlet weak var pastButton: UIButton!
+    @IBOutlet weak var pastIndicator: UIView!
+    
+    var isPast:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +41,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
 
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        getDashboard(false) { (response, error) in
+        getDashboard(isPast) { (response, error) in
             refreshControl.endRefreshing()
             
             if (error == nil) {
@@ -102,5 +110,28 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         // Pass the selected object to the new view controller.
     }
     
-
+    func handleTabClick() {
+        if isPast {
+            currentIndicator.isHidden = true
+            pastIndicator.isHidden = false
+            //grey EEEDF0
+            //white FFFFFF
+        } else {
+            
+        }
+    }
+    
+    @IBAction func pastClicked(_ sender: Any) {
+        if !isPast {
+            isPast = true
+            handleTabClick()
+        }
+    }
+    @IBAction func currentClicked(_ sender: Any) {
+        if isPast {
+            isPast = false
+            handleTabClick()
+        }
+    }
+    
 }

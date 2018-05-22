@@ -9,9 +9,9 @@
 import Foundation
 import SwiftSoup
 
-public func parseDashboard(html: String) -> Dashboard {
+public func parseDashboard(html: String, isPast:Bool) -> Dashboard {
     let dash = Dashboard()
-
+    dash.isPast = isPast
     do {
         let doc: Document = try SwiftSoup.parse(html)
 
@@ -50,7 +50,36 @@ public func parseDashboard(html: String) -> Dashboard {
 }
 
 
-
+public func parseScheduleJson(json: [[String: Any]]) -> GameSchedule {
+    let schedule = GameSchedule()
+    for leagueGame in json {
+        let game = ScheduleGame()
+        game.leagueName = leagueGame["baseEventName"] as! String
+        game.leagueID = String(leagueGame["baseEventId"] as! Int)
+        game.leagueImageUrl = "https://svite-league-apps-img.s3.amazonaws.com/program-" + game.leagueID + "-s3.jpg"
+        let location = GameLocation()
+        location.name = leagueGame["locationName"] as! String
+        let sublocation = leagueGame["sublocationName"] as! String
+        if sublocation != "" {
+            location.name += (" (" + sublocation + ")")
+        }
+        location.url = "/location/" + String(leagueGame["locationId"] as! Int)
+        game.team1Name = leagueGame["team1Name"] as! String
+        game.team2Name = leagueGame["team2Name"] as! String
+        game.team1URL = leagueGame["team1PublicHomeURI"] as! String
+        game.team2URL = leagueGame["team2PublicHomeURI"] as! String
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //2018-05-24 20:00:00
+        let date = dateFormatter.date(from: leagueGame["start"] as! String)
+        dateFormatter.dateFormat = "E, MMM dd"
+        game.date = dateFormatter.string(from: date!)
+        dateFormatter.dateFormat = "h:mm a"
+        game.time = dateFormatter.string(from: date!)
+        schedule.games.append(game)
+    }
+    return schedule
+}
 
 public func parseLeague(html: String) -> League {
     let league = League()
@@ -109,6 +138,11 @@ public func parseLeagueSchedule(html :String) -> LeagueSchedule {
             location.url = try! row.select("p.event-details a").first()!.attr("href")
             game.location = location
             
+            let tagElement = try! row.select(".game-type.tag")
+            if tagElement.size() > 0 {
+                game.tag = try! tagElement.first()!.text()
+            }
+            
             game.team1Name = try! row.select("span.team-score a").first()!.text()
             game.team1URL = try! row.select("span.team-score a").first()!.attr("href")
             var score = try! row.select("span.team-score strong.score").first()!.text()
@@ -149,14 +183,27 @@ public func parseTeamSchedule(html :String) -> LeagueSchedule {
             location.url = try! row.select("p.event-details a").first()!.attr("href")
             game.location = location
             
+            let tagElement = try! row.select(".game-type.tag")
+            if tagElement.size() > 0 {
+                game.tag = try! tagElement.first()!.text()
+            }
+            
             let score = try! row.select("span.team-result")
             if score.size() > 0 {
                 var scoreString = try! score.first()?.text()
-                if (scoreString?.starts(with: "W"))! || (scoreString?.starts(with: "L"))! {
-                    scoreString = String((scoreString?.dropFirst())!)
+                if (scoreString == "W") {
+                    game.team1Score = "W"
+                    game.team2Score = "L"
+                } else if (scoreString == "L") {
+                    game.team1Score = "L"
+                    game.team2Score = "W"
+                } else {
+                    if (scoreString?.starts(with: "W"))! || (scoreString?.starts(with: "L"))! {
+                        scoreString = String((scoreString?.dropFirst())!)
+                    }
+                    game.team1Score = scoreString!.components(separatedBy: " - ")[0]
+                    game.team2Score = scoreString!.components(separatedBy: " - ")[1]
                 }
-                game.team1Score = scoreString!.components(separatedBy: " - ")[0]
-                game.team2Score = scoreString!.components(separatedBy: " - ")[1]
             }
             
             if try! row.select("h3.event-team").size() > 0 {

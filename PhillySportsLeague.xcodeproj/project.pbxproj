@@ -39,6 +39,10 @@
 		F1E7201F20AEF46300B123D0 /* DateSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E7201E20AEF46300B123D0 /* DateSectionHeader.xib */; };
 		F1E7202120AEF8F500B123D0 /* DateHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202020AEF8F500B123D0 /* DateHeaderTableViewCell.swift */; };
 		F1E7202320AF028200B123D0 /* HeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202220AF028200B123D0 /* HeaderRow.swift */; };
+		F1E7202520B2E75300B123D0 /* DataButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202420B2E75300B123D0 /* DataButton.swift */; };
+		F1E7202720B3AAEE00B123D0 /* GameSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202620B3AAEE00B123D0 /* GameSchedule.swift */; };
+		F1E7202920B3AC1300B123D0 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202820B3AC1300B123D0 /* ScheduleViewController.swift */; };
+		F1E7202B20B437B200B123D0 /* ScheduleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202A20B437B200B123D0 /* ScheduleGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +82,10 @@
 		F1E7201E20AEF46300B123D0 /* DateSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSectionHeader.xib; sourceTree = "<group>"; };
 		F1E7202020AEF8F500B123D0 /* DateHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		F1E7202220AF028200B123D0 /* HeaderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRow.swift; sourceTree = "<group>"; };
+		F1E7202420B2E75300B123D0 /* DataButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataButton.swift; sourceTree = "<group>"; };
+		F1E7202620B3AAEE00B123D0 /* GameSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSchedule.swift; sourceTree = "<group>"; };
+		F1E7202820B3AC1300B123D0 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		F1E7202A20B437B200B123D0 /* ScheduleGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,8 @@
 				F16BED1D209676DF003E5076 /* LeagueSchedule.swift */,
 				F16BED1F20968B26003E5076 /* GameLocation.swift */,
 				F1E7202220AF028200B123D0 /* HeaderRow.swift */,
+				F1E7202620B3AAEE00B123D0 /* GameSchedule.swift */,
+				F1E7202A20B437B200B123D0 /* ScheduleGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +182,7 @@
 				F16BED1120909B97003E5076 /* LeagueViewController.swift */,
 				F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */,
 				F1B8F0D6209C79520082F88D /* TeamViewController.swift */,
+				F1E7202820B3AC1300B123D0 /* ScheduleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 				F16BED0B208E1962003E5076 /* CardTableViewCell.swift */,
 				F1B8F0D4209B2AEB0082F88D /* LeagueGameTableViewCell.swift */,
 				F1E7202020AEF8F500B123D0 /* DateHeaderTableViewCell.swift */,
+				F1E7202420B2E75300B123D0 /* DataButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */,
+				F1E7202720B3AAEE00B123D0 /* GameSchedule.swift in Sources */,
 				F1B8F0D7209C79520082F88D /* TeamViewController.swift in Sources */,
 				F16BED1C209676D5003E5076 /* Game.swift in Sources */,
 				F1B8F0D5209B2AEB0082F88D /* LeagueGameTableViewCell.swift in Sources */,
@@ -358,6 +371,7 @@
 				F1B458622088338600EED099 /* Dashboard.swift in Sources */,
 				F16BED22209736CB003E5076 /* LeagueScheduleViewController.swift in Sources */,
 				73CAF91820795653003937C3 /* ViewController.swift in Sources */,
+				F1E7202B20B437B200B123D0 /* ScheduleGame.swift in Sources */,
 				73CAF92A2079658E003937C3 /* LoginWebViewController.swift in Sources */,
 				F1B458642088342C00EED099 /* Parser.swift in Sources */,
 				F16BED07208E02A2003E5076 /* DashboardTableViewCell.swift in Sources */,
@@ -367,6 +381,8 @@
 				F16BED05208DFA9F003E5076 /* JsonResponse.swift in Sources */,
 				73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */,
 				F16BED2020968B26003E5076 /* GameLocation.swift in Sources */,
+				F1E7202520B2E75300B123D0 /* DataButton.swift in Sources */,
+				F1E7202920B3AC1300B123D0 /* ScheduleViewController.swift in Sources */,
 				F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */,
 				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
 				F1E7202120AEF8F500B123D0 /* DateHeaderTableViewCell.swift in Sources */,
