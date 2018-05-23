@@ -15,11 +15,12 @@ public class ScheduleGame : Game {
         self.leagueID = ""
         self.leagueName = ""
         self.leagueImageUrl = ""
+        self.gameDate = Date()
         super.init()
     }
 
     var leagueName: String
     var leagueID: String
     var leagueImageUrl:String
-    
+    var gameDate: Date
 }

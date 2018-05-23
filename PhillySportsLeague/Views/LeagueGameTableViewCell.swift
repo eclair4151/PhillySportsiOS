@@ -20,6 +20,8 @@ class LeagueGameTableViewCell: CardTableViewCell {
     @IBOutlet weak var sideColor: UIView!
     @IBOutlet weak var tagLabel: UILabel!
     
+    @IBOutlet weak var leagueImage: UIImageView!
+    @IBOutlet weak var leagueName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

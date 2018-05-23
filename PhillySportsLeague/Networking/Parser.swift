@@ -64,6 +64,7 @@ public func parseScheduleJson(json: [[String: Any]]) -> GameSchedule {
             location.name += (" (" + sublocation + ")")
         }
         location.url = "/location/" + String(leagueGame["locationId"] as! Int)
+        game.location = location
         game.team1Name = leagueGame["team1Name"] as! String
         game.team2Name = leagueGame["team2Name"] as! String
         game.team1URL = leagueGame["team1PublicHomeURI"] as! String
@@ -72,6 +73,7 @@ public func parseScheduleJson(json: [[String: Any]]) -> GameSchedule {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" //2018-05-24 20:00:00
         let date = dateFormatter.date(from: leagueGame["start"] as! String)
+        game.gameDate = date!
         dateFormatter.dateFormat = "E, MMM dd"
         game.date = dateFormatter.string(from: date!)
         dateFormatter.dateFormat = "h:mm a"

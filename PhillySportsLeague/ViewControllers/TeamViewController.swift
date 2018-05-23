@@ -36,8 +36,8 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
         let ids = self.teamUrl.split(separator: "/")
         
         getTeamSchedule(String(ids[3]), leagueID: String(ids[1])) { (response, error) in
+            self.tableView.refreshControl?.endRefreshing()
             if (error == nil) {
-                self.tableView.refreshControl?.endRefreshing()
                 self.teamSchedule = response
                 self.tableView.reloadData()
             } else {

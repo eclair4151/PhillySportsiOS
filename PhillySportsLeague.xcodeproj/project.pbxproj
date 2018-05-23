@@ -18,6 +18,8 @@
 		73CAF92D20796CD9003937C3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF92C20796CD9003937C3 /* LoginViewController.swift */; };
 		73CAF93020796D86003937C3 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73CAF92F20796D86003937C3 /* UIExtensions.swift */; };
 		8E396C3FB5BADF2B525CE447 /* Pods_PhillySportsLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AB2F0C9E2A3E2029F56F74 /* Pods_PhillySportsLeague.framework */; };
+		F10D9CBE20B5894A00F284C9 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D9CBD20B5894A00F284C9 /* RootTabViewController.swift */; };
+		F10D9CC020B58A5700F284C9 /* ParentTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10D9CBF20B58A5700F284C9 /* ParentTabViewController.swift */; };
 		F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED0020883B97003E5076 /* DashboardRow.swift */; };
 		F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED022088B81B003E5076 /* UIHelpers.swift */; };
 		F16BED05208DFA9F003E5076 /* JsonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BED04208DFA9F003E5076 /* JsonResponse.swift */; };
@@ -43,6 +45,7 @@
 		F1E7202720B3AAEE00B123D0 /* GameSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202620B3AAEE00B123D0 /* GameSchedule.swift */; };
 		F1E7202920B3AC1300B123D0 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202820B3AC1300B123D0 /* ScheduleViewController.swift */; };
 		F1E7202B20B437B200B123D0 /* ScheduleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7202A20B437B200B123D0 /* ScheduleGame.swift */; };
+		F1E7202D20B4CA4100B123D0 /* LeagueGameRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E7202C20B4CA4100B123D0 /* LeagueGameRow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,8 @@
 		73CAF92F20796D86003937C3 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		BB1700535CAB665930C89048 /* Pods-PhillySportsLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.release.xcconfig"; sourceTree = "<group>"; };
 		CE6F45E7802053E6B1F5D8D9 /* Pods-PhillySportsLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhillySportsLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhillySportsLeague/Pods-PhillySportsLeague.debug.xcconfig"; sourceTree = "<group>"; };
+		F10D9CBD20B5894A00F284C9 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
+		F10D9CBF20B58A5700F284C9 /* ParentTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentTabViewController.swift; sourceTree = "<group>"; };
 		F16BED0020883B97003E5076 /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
 		F16BED022088B81B003E5076 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
 		F16BED04208DFA9F003E5076 /* JsonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonResponse.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 		F1E7202620B3AAEE00B123D0 /* GameSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSchedule.swift; sourceTree = "<group>"; };
 		F1E7202820B3AC1300B123D0 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		F1E7202A20B437B200B123D0 /* ScheduleGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleGame.swift; sourceTree = "<group>"; };
+		F1E7202C20B4CA4100B123D0 /* LeagueGameRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeagueGameRow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +189,8 @@
 				F16BED21209736CB003E5076 /* LeagueScheduleViewController.swift */,
 				F1B8F0D6209C79520082F88D /* TeamViewController.swift */,
 				F1E7202820B3AC1300B123D0 /* ScheduleViewController.swift */,
+				F10D9CBD20B5894A00F284C9 /* RootTabViewController.swift */,
+				F10D9CBF20B58A5700F284C9 /* ParentTabViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B8F0D0209B29140082F88D /* GameRow.xib */,
+				F1E7202C20B4CA4100B123D0 /* LeagueGameRow.xib */,
 				F1E7201E20AEF46300B123D0 /* DateSectionHeader.xib */,
 			);
 			path = Nibs;
@@ -289,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73CAF92820795662003937C3 /* Login.storyboard in Resources */,
+				F1E7202D20B4CA4100B123D0 /* LeagueGameRow.xib in Resources */,
 				73CAF92020795653003937C3 /* LaunchScreen.storyboard in Resources */,
 				F1E7201F20AEF46300B123D0 /* DateSectionHeader.xib in Resources */,
 				73CAF91D20795653003937C3 /* Assets.xcassets in Resources */,
@@ -386,7 +396,9 @@
 				F16BED032088B81B003E5076 /* UIHelpers.swift in Sources */,
 				73CAF91620795653003937C3 /* AppDelegate.swift in Sources */,
 				F1E7202120AEF8F500B123D0 /* DateHeaderTableViewCell.swift in Sources */,
+				F10D9CBE20B5894A00F284C9 /* RootTabViewController.swift in Sources */,
 				F16BED0120883B97003E5076 /* DashboardRow.swift in Sources */,
+				F10D9CC020B58A5700F284C9 /* ParentTabViewController.swift in Sources */,
 				F16BED1220909B97003E5076 /* LeagueViewController.swift in Sources */,
 				F16BED1E209676DF003E5076 /* LeagueSchedule.swift in Sources */,
 				F16BED0E208FAE60003E5076 /* League.swift in Sources */,
