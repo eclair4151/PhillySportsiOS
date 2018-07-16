@@ -16,7 +16,8 @@ public func login(_ email: String, password: String, listener: @escaping ((Dashb
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     
     let headers = [
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
     ]
     
     let parameters = [
@@ -57,7 +58,7 @@ public func getDashboard(_ isPast:Bool, listener: @escaping ((Dashboard?, Error?
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     
-    Alamofire.request("https://phillyleagues.leagueapps.com/dashboard" + (isPast ? "?state=past" : ""), method: .get, encoding: URLEncoding.default)
+    Alamofire.request("https://phillyleagues.leagueapps.com/dashboard" + (isPast ? "?state=past" : ""), method: .get , encoding: URLEncoding.default, headers: sessionManager())
         .response(
             queue: queue,
             responseSerializer: DataRequest.stringResponseSerializer(),
@@ -87,7 +88,7 @@ public func getLeagueSchedule(_ leagueID: String, listener: @escaping ((LeagueSc
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     let url = "https://phillyleagues.leagueapps.com/ajax/loadSchedule?origin=site&scope=program&itemType=games_events&programId=" + leagueID
-    Alamofire.request(url, method: .get, encoding: URLEncoding.default)
+    Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: sessionManager())
         .response(
             queue: queue,
             responseSerializer: DataRequest.stringResponseSerializer(),
@@ -144,7 +145,7 @@ public func getTeamSchedule(_ teamID: String, leagueID: String, listener: @escap
 public func getLeague(_ url: String, listener: @escaping ((League?, Error?) -> Void))
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
-    Alamofire.request(url, method: .get, encoding: URLEncoding.default)
+    Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: sessionManager())
         .response(
             queue: queue,
             responseSerializer: DataRequest.stringResponseSerializer(),
@@ -204,4 +205,27 @@ public func clearCookies() -> Void{
     for cookie in cookieStore.cookies ?? [] {
         cookieStore.deleteCookie(cookie)
     }
+}
+
+
+
+private func sessionManager() -> HTTPHeaders {
+//    let sessionManager = Alamofire.SessionManager.default
+//    sessionManager.session.configuration.httpAdditionalHeaders = [
+//        "User-Agent2": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+//    ]
+    
+    // get the default headers
+    var headers = Alamofire.SessionManager.defaultHTTPHeaders
+    // add your custom header
+    headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36"
+    
+    // create a custom session configuration
+//    let configuration = URLSessionConfiguration.default
+//    // add the headers
+//    configuration.httpAdditionalHeaders = headers
+//
+//    // create a session manager with the configuration
+//    let sessionManager = Alamofire.SessionManager(configuration: configuration)
+    return headers
 }

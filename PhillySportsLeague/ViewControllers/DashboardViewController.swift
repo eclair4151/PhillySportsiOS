@@ -100,24 +100,39 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             let destination = segue.destination as? TeamViewController
             destination?.teamUrl = dashboardRow.teamUrl
             destination?.teamName = dashboardRow.teamName
-            
+    
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
-        
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "ShowTeam" {
+            let row = (sender as! UIButton).tag
+            let dashboardRow = self.dashboard.dashboardRows[row]
+            return dashboardRow.teamUrl != ""
+        }else {
+            return true
+        }
     }
     
     func handleTabClick() {
         if isPast {
             currentIndicator.isHidden = true
             pastIndicator.isHidden = false
+            currentButton.backgroundColor = UIColor(rgb: 0xEEEDF0)
+            pastButton.backgroundColor = UIColor(rgb: 0xFFFFFF)
+
             //grey EEEDF0
             //white FFFFFF
         } else {
-            
+            currentIndicator.isHidden = false
+            pastIndicator.isHidden = true
+            pastButton.backgroundColor = UIColor(rgb: 0xEEEDF0)
+            currentButton.backgroundColor = UIColor(rgb: 0xFFFFFF)
         }
     }
     

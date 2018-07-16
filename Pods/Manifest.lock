@@ -1,18 +1,21 @@
 PODS:
   - Alamofire (4.7.1)
+  - FLEX (2.4.0)
   - Kingfisher (4.7.0)
   - SwiftSoup (1.7.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - FLEX
   - Kingfisher (~> 4.0)
   - SwiftSoup (~> 1.7)
 
 SPEC CHECKSUMS:
   Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   SwiftSoup: 277f7ef548826e0ca7603a06b30d4a5df3ee0587
 
-PODFILE CHECKSUM: 5caf95f0e643e7325812be15bd97a379fd951cbe
+PODFILE CHECKSUM: eff1b0d5fc45d9b2709d2dc9934e725aa79231ee
 
 COCOAPODS: 1.4.0

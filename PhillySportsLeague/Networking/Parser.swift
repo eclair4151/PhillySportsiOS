@@ -29,9 +29,17 @@ public func parseDashboard(html: String, isPast:Bool) -> Dashboard {
                 let leagueUrl  = Constants.baseUrl + (try! columns.get(0).select("a").first()?.attr("href"))!
                 let leagueName = try! columns.get(0).select("a").first()?.text()
                 let startDate = try! columns.get(0).select("small").first()?.text()
-                let teamUrl =  (try! columns.get(1).select("a").first()?.attr("href"))!
-                let teamName = try! columns.get(1).select("a").first()?.text()
-                let dashboardRow = DashboardRow(leagueName: leagueName!, leagueUrl: leagueUrl, teamName: teamName!, teamUrl: teamUrl, startDate: startDate!)
+                let teamQuery = try! columns.get(1).select("a")
+                var teamName = ""
+                var teamUrl = ""
+                if teamQuery.size() == 0 {
+                    teamName = try! columns.get(1).select("small").text()
+                } else {
+                    teamUrl =  (try! columns.get(1).select("a").first()?.attr("href"))!
+                    teamName = try! columns.get(1).select("a").first()!.text()
+                }
+               
+                let dashboardRow = DashboardRow(leagueName: leagueName!, leagueUrl: leagueUrl, teamName: teamName, teamUrl: teamUrl, startDate: startDate!)
                 dash.dashboardRows.append(dashboardRow)
             }
             

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FLEX
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "home")
             self.window?.rootViewController = initialViewController
         }
-
+        //FLEXManager.shared().showExplorer()
+        
         return true
     }
 

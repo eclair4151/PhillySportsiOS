@@ -7,6 +7,7 @@ target 'PhillySportsLeague' do
   pod 'Alamofire', '~> 4.7'
   pod 'SwiftSoup', '~> 1.7'
   pod 'Kingfisher', '~> 4.0'
+  pod 'FLEX'
   # Pods for PhillySportsLeague
 
 end
