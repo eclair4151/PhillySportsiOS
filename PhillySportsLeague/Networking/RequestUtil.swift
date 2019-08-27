@@ -116,7 +116,7 @@ public func getLeagueSchedule(_ leagueID: String, listener: @escaping ((LeagueSc
 public func getTeamSchedule(_ teamID: String, leagueID: String, listener: @escaping ((LeagueSchedule?, Error?) -> Void))
 {
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
-    let url = "https://phillyleagues.leagueapps.com/ajax/loadSchedule?origin=site&scope=team&itemType=games_events&teamId=" + teamID + "&programId=" + leagueID
+    let url = "https://phillyleagues.leagueapps.com/ajax/loadSchedule?origin=site&publishedOnly=0&scope=team&itemType=games_events&teamId=" + teamID + "&programId=" + leagueID
     Alamofire.request(url, method: .get, encoding: URLEncoding.default)
         .response(
             queue: queue,
@@ -173,7 +173,12 @@ public func getLeague(_ url: String, listener: @escaping ((League?, Error?) -> V
 
 public func getSchedule(_ listener: @escaping ((GameSchedule?, Error?) -> Void))
 {
-    let url = "https://phillyleagues.leagueapps.com/calendar/json?origin=site&scope=user&baseEventId=&itemType=games_events&eventType=&gameType=&gameState=&locationId=&startsAfterDate=&startsBeforeDate=&baseEventIdsString=&locationIdsString=&sublocationIdsString=&teamId=&userScope=me_kids"
+    let dateFormatterPrint = DateFormatter()
+    dateFormatterPrint.dateFormat = "MM/dd/yyyy"
+    let start = dateFormatterPrint.string(from: Date()).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+    let endDate = Calendar.current.date(byAdding: .month, value: 2, to: Date())!
+    let end = dateFormatterPrint.string(from: endDate).addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+    let url = "https://phillyleagues.leagueapps.com/calendar/json?origin=site&scope=user&baseEventId=&itemType=games_events&eventType=&gameType=&gameState=&locationId=&startsAfterDate=\(start)&startsBeforeDate=\(end)&baseEventIdsString=&locationIdsString=&sublocationIdsString=&teamId=&userScope=me_kids"
     let queue = DispatchQueue(label: "main_queue", qos: .utility, attributes: [.concurrent])
     Alamofire.request(url, method: .get, encoding: URLEncoding.default)
         .response(

@@ -79,10 +79,12 @@ class LeagueScheduleViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     @objc func buttonClicked(_ sender : DataButton) {
-        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
-        nextView.teamUrl = sender.teamUrl!
-        nextView.teamName = sender.teamName!
-        self.navigationController?.pushViewController(nextView, animated: true)
+        if let tUrl = sender.teamUrl, !tUrl.isEmpty {
+            let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
+            nextView.teamUrl = tUrl
+            nextView.teamName = sender.teamName!
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
     }
     
 

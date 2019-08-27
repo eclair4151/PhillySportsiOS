@@ -140,12 +140,12 @@ public func parseLeagueSchedule(html :String) -> LeagueSchedule {
         let gameRows = try! doc.select("li.schedule-game").array()
         for row in gameRows {
             let game = Game()
-            game.date = try! row.select("span.date").first()!.text()
-            game.time = try! row.select("span.time").first()!.text()
+            game.date = try! row.select("span.date").first()?.text() ?? ""
+            game.time = try! row.select("span.time").first()?.text() ?? ""
             
             let location = GameLocation()
-            location.name = try! row.select("p.event-details a").first()!.text()
-            location.url = try! row.select("p.event-details a").first()!.attr("href")
+            location.name = try! row.select("p.event-details a").first()?.text() ?? ""
+            location.url = try! row.select("p.event-details a").first()?.attr("href") ?? ""
             game.location = location
             
             let tagElement = try! row.select(".game-type.tag")
@@ -153,9 +153,9 @@ public func parseLeagueSchedule(html :String) -> LeagueSchedule {
                 game.tag = try! tagElement.first()!.text()
             }
             
-            game.team1Name = try! row.select("span.team-score a").first()!.text()
-            game.team1URL = try! row.select("span.team-score a").first()!.attr("href")
-            var score = try! row.select("span.team-score strong.score").first()!.text()
+            game.team1Name = try! row.select("span.team-score a").first()?.text() ?? ""
+            game.team1URL = try! row.select("span.team-score a").first()?.attr("href") ?? ""
+            var score = try! row.select("span.team-score strong.score").first()?.text() ?? ""
             game.team1Score = score
     
             
@@ -185,12 +185,12 @@ public func parseTeamSchedule(html :String) -> LeagueSchedule {
         let gameRows = try! doc.select("li.schedule-game").array()
         for row in gameRows {
             let game = Game()
-            game.date = try! row.select("span.date").first()!.text()
-            game.time = try! row.select("span.time").first()!.text()
+            game.date = try! row.select("span.date").first()?.text() ?? ""
+            game.time = try! row.select("span.time").first()?.text() ?? ""
             
             let location = GameLocation()
-            location.name = try! row.select("p.event-details a").first()!.text()
-            location.url = try! row.select("p.event-details a").first()!.attr("href")
+            location.name = try! row.select("p.event-details a").first()?.text() ?? ""
+            location.url = try! row.select("p.event-details a").first()?.attr("href") ?? ""
             game.location = location
             
             let tagElement = try! row.select(".game-type.tag")
@@ -217,8 +217,8 @@ public func parseTeamSchedule(html :String) -> LeagueSchedule {
             }
             
             if try! row.select("h3.event-team").size() > 0 {
-                game.team2Name = (try! row.select("h3.event-team a").first()?.text())!
-                game.team2URL = (try! row.select("h3.event-team a").first()?.attr("href"))!
+                game.team2Name = (try! row.select("h3.event-team a").first()?.text()) ?? ""
+                game.team2URL = (try! row.select("h3.event-team a").first()?.attr("href")) ?? ""
             }
             
             schedule.addGame(game: game)

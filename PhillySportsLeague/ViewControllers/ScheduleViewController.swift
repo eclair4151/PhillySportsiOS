@@ -46,11 +46,11 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         cell.dateLabel.text = game.date + " @ " + game.time
         cell.team1Button.setTitle(game.team1Name, for: .normal)
         cell.team2Button.setTitle(game.team2Name, for: .normal)
-        //cell.team2Button.tag = indexPath.row
-       // cell.team2Button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        cell.team2Button.tag = indexPath.row
+        cell.team2Button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
 
-        //cell.team1Score.text = game.team1Score
-        //cell.team2Score.text = game.team2Score
+//        cell.team1Score.text = game.team1Score
+//        cell.team2Score.text = game.team2Score
 
         cell.locationLabel.text = "Location: " + game.location.name
         let url = URL(string: game.leagueImageUrl)!
@@ -63,11 +63,11 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @objc func buttonClicked(_ sender : UIButton) {
-//        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
-//        let team = self.teamSchedule.games[sender.tag]
-//        nextView.teamUrl = team.team2URL
-//        nextView.teamName = team.team2Name
-//        self.navigationController?.pushViewController(nextView, animated: true)
+        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
+        let game = gameSchedule.games[sender.tag]
+        nextView.teamUrl = game.team2URL
+        nextView.teamName = game.team2Name
+        self.navigationController?.pushViewController(nextView, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

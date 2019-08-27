@@ -84,11 +84,14 @@ class TeamViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func buttonClicked(_ sender : UIButton) {
-        let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
         let team = self.teamSchedule.games[sender.tag]
-        nextView.teamUrl = team.team2URL
-        nextView.teamName = team.team2Name
-        self.navigationController?.pushViewController(nextView, animated: true)
+
+        if !team.team2URL.isEmpty {
+            let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
+            nextView.teamUrl = team.team2URL
+            nextView.teamName = team.team2Name
+            self.navigationController?.pushViewController(nextView, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
